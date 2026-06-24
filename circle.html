@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>生生不息・公益女人圈｜每月新月・線上調頻</title>
+<meta name="description" content="每個月新月，我們一起線上調頻。一個不收費、不評判的女性圓圈——回到呼吸、回到身體，為新的循環，輕輕許一個意圖。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,400&family=Noto+Serif+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-tc-webfont@1.7.0/style.css" rel="stylesheet">
+<style>
+  :root{
+    --sage:#9c8472; --sage-deep:#7a655a;
+    --clay:#c89a92; --clay-deep:#a8786d;
+    --gold:#bfa46f; --ink:#433c38; --ink-soft:#7a7066;
+    --cream:#faf6f0; --card:#ffffff; --sand:#f2eae0; --line:#e7ddce;
+    /* 新月夜色 */
+    --night:#2c2733; --night-2:#3b3340; --night-soft:#cdbfc6;
+    --radius:18px; --shadow:0 12px 40px -18px rgba(95,76,50,.35);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Noto Serif TC","LXGW WenKai TC",serif;color:var(--ink);background:var(--cream);line-height:1.95;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.display{font-family:"LXGW WenKai TC","Noto Serif TC",serif;font-weight:400;letter-spacing:.02em}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  .narrow{max-width:760px;margin:0 auto}
+  a{color:inherit}
+
+  .btn{display:inline-flex;align-items:center;gap:.5em;padding:.9em 2em;border-radius:999px;font-family:"Noto Serif TC",serif;font-weight:600;font-size:1.02rem;text-decoration:none;cursor:pointer;border:1.5px solid transparent;transition:transform .15s ease,box-shadow .2s ease,background .2s ease}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-primary{background:var(--clay);color:#fff;box-shadow:0 10px 24px -12px var(--clay-deep)}
+  .btn-primary:hover{background:var(--clay-deep)}
+  .btn-moon{background:#f4ece1;color:var(--night);box-shadow:0 10px 30px -14px rgba(0,0,0,.5)}
+  .btn-moon:hover{background:#fff}
+  .btn-ghost{background:transparent;color:#f0e8dd;border-color:rgba(240,232,221,.5)}
+  .btn-ghost:hover{background:rgba(240,232,221,.14)}
+
+  /* ===== Hero（新月夜）===== */
+  header.hero{
+    position:relative;overflow:hidden;text-align:center;color:#f3ece2;
+    padding:78px 0 84px;
+    background:
+      radial-gradient(60% 50% at 50% 8%, rgba(191,164,111,.20), transparent 60%),
+      radial-gradient(80% 60% at 80% 100%, rgba(200,154,146,.20), transparent 60%),
+      linear-gradient(165deg,var(--night),var(--night-2) 70%,#4a3f44);
+  }
+  .moon{
+    width:96px;height:96px;border-radius:50%;margin:0 auto 22px;position:relative;
+    background:radial-gradient(circle at 50% 50%, #6a5f63, #423a44 70%);
+    box-shadow:0 0 0 1px rgba(255,255,255,.07), 0 0 60px 8px rgba(191,164,111,.18), inset -10px -8px 22px rgba(0,0,0,.5);
+  }
+  .moon::after{content:"";position:absolute;inset:0;border-radius:50%;box-shadow:inset 14px 10px 26px rgba(243,236,226,.10)}
+  .hero-logo{width:120px;margin:0 auto 14px;display:block;opacity:.96;filter:drop-shadow(0 10px 24px rgba(0,0,0,.4))}
+  .eyebrow{letter-spacing:.5em;font-size:.78rem;color:#d8c19a;font-family:"Cormorant Garamond",serif;text-transform:uppercase;margin-bottom:16px;padding-left:.5em}
+  header.hero h1{font-size:clamp(2rem,5vw,2.9rem);color:#fbf6ee}
+  .hero-sub{font-size:clamp(1.12rem,2.8vw,1.5rem);color:#e6c9b6;margin-top:12px;font-family:"LXGW WenKai TC",serif;letter-spacing:.06em}
+  .hero-lead{max-width:620px;margin:26px auto 32px;color:var(--night-soft);font-size:1.06rem}
+  .hero-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .hero-meta{margin-top:28px;color:#bcacb3;font-size:.92rem;letter-spacing:.04em}
+  .hero-meta b{color:#e6c9b6;font-weight:500}
+  .next{display:inline-block;margin-top:22px;padding:.5em 1.3em;border:1px solid rgba(216,193,154,.4);border-radius:999px;color:#e8d3ac;font-size:.92rem;letter-spacing:.05em}
+
+  section{padding:74px 0}
+  section.alt{background:linear-gradient(180deg,#fff,var(--cream))}
+  .sec-head{text-align:center;margin-bottom:44px}
+  .sec-head .kicker{color:var(--clay-deep);letter-spacing:.32em;font-size:.8rem;display:block;margin-bottom:12px}
+  .sec-head h2{font-size:clamp(1.7rem,4vw,2.3rem);color:var(--ink)}
+  .sec-head p{color:var(--ink-soft);margin-top:14px}
+  .lead-quote{font-size:1.18rem;color:var(--sage-deep);text-align:center;font-family:"LXGW WenKai TC",serif;line-height:2.15}
+  .body-p{color:var(--ink-soft);font-size:1.05rem;text-align:center;margin-top:24px}
+
+  /* 為什麼新月 — 兩欄 */
+  .why{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+  .why .txt h3{font-size:1.5rem;margin-bottom:14px;color:var(--ink)}
+  .why .txt p{color:var(--ink-soft);font-size:1.02rem;margin-bottom:14px}
+  .why .pic{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);aspect-ratio:4/5}
+  .why .pic img{width:100%;height:100%;object-fit:cover;display:block}
+  .note{font-size:.9rem;color:var(--sage-deep);background:var(--sand);border-left:3px solid var(--clay);border-radius:6px;padding:12px 16px;margin-top:8px;line-height:1.8}
+
+  /* 流程三步 */
+  .flow{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .step{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px;text-align:center;box-shadow:var(--shadow)}
+  .step .ph{font-family:"LXGW WenKai TC",serif;font-size:1.9rem;color:var(--clay);line-height:1;margin-bottom:6px}
+  .step .en{display:block;color:var(--gold);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px}
+  .step h3{font-size:1.18rem;margin-bottom:10px}
+  .step p{font-size:.95rem;color:var(--ink-soft);line-height:1.8}
+
+  /* 形式資訊條 */
+  .facts{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:4px}
+  .fact{background:var(--sand);border-radius:14px;padding:22px 18px;text-align:center}
+  .fact .k{font-family:"Cormorant Garamond",serif;color:var(--clay-deep);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
+  .fact .v{font-size:1.12rem;color:var(--ink)}
+  .fact .v small{display:block;font-size:.82rem;color:var(--ink-soft);margin-top:4px}
+
+  /* 場次 */
+  .dates{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:760px;margin:0 auto}
+  .date{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 20px}
+  .date .d{flex:0 0 auto;text-align:center;font-family:"LXGW WenKai TC",serif;color:var(--clay-deep);line-height:1.1}
+  .date .d b{display:block;font-size:1.5rem;color:var(--ink)}
+  .date .d span{font-size:.74rem;letter-spacing:.1em}
+  .date .t{font-size:.95rem;color:var(--ink-soft)}
+  .sched-note{text-align:center;color:var(--ink-soft);font-size:.88rem;margin-top:22px}
+
+  /* 適合誰 */
+  .fit{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:6px}
+  .fit span{background:#fff;border:1px solid var(--line);color:var(--sage-deep);padding:.45em 1.1em;border-radius:999px;font-size:.95rem}
+
+  /* CTA */
+  .cta-box{background:linear-gradient(160deg,var(--night),var(--night-2));color:#f3ece2;border-radius:24px;padding:56px 44px;text-align:center;box-shadow:var(--shadow);position:relative;overflow:hidden}
+  .cta-box::before{content:"";position:absolute;width:160px;height:160px;border-radius:50%;top:-50px;right:-30px;background:radial-gradient(circle,#5b5057,transparent 70%);opacity:.6}
+  .cta-box h2{font-size:clamp(1.6rem,4vw,2.2rem);margin-bottom:14px;color:#fbf6ee;position:relative}
+  .cta-box p{max-width:560px;margin:0 auto 26px;color:var(--night-soft);position:relative}
+
+  /* 主辦 */
+  .leaders{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  .lead-card{display:flex;gap:18px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
+  .lead-card .ava{flex:0 0 84px;width:84px;height:84px;border-radius:50%;overflow:hidden;background:var(--sand)}
+  .lead-card .ava img{width:100%;height:100%;object-fit:contain;display:block}
+  .lead-card h3{font-size:1.18rem;margin-bottom:2px}
+  .lead-card .role{font-family:"Cormorant Garamond",serif;font-style:italic;color:var(--clay-deep);font-size:.92rem;margin-bottom:9px}
+  .lead-card p{font-size:.92rem;color:var(--ink-soft);line-height:1.78;margin-bottom:9px}
+  .lead-card .ig{text-decoration:none;color:var(--clay-deep);font-size:.84rem}
+  .lead-card .ig:hover{text-decoration:underline}
+
+  footer{background:var(--night);color:#cdc3cc;text-align:center;padding:44px 24px;font-size:.92rem}
+  footer .brand{font-family:"LXGW WenKai TC",serif;font-size:1.25rem;color:#fff;margin-bottom:8px}
+  footer a{color:var(--clay)}
+  footer .small{opacity:.55;margin-top:14px;font-size:.8rem}
+  footer .home{display:inline-block;margin-top:10px;color:#e6c9b6;text-decoration:none;border-bottom:1px solid rgba(230,201,182,.4)}
+
+  @media(max-width:860px){
+    .why{grid-template-columns:1fr;gap:26px}
+    .flow{grid-template-columns:1fr}
+    .facts{grid-template-columns:repeat(2,1fr)}
+    .dates{grid-template-columns:repeat(2,1fr)}
+    .leaders{grid-template-columns:1fr}
+  }
+  @media(max-width:520px){
+    .facts,.dates{grid-template-columns:1fr}
+    section{padding:56px 0}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="wrap">
+    <div class="moon" aria-hidden="true"></div>
+    <img class="hero-logo" src="assets/logo-cut.png" alt="生生不息 • 溫柔孕育圈">
+    <div class="eyebrow">New Moon Gathering</div>
+    <h1>公 益 女 人 圈</h1>
+    <p class="hero-sub">每個月新月，我們一起，線上調頻</p>
+    <p class="hero-lead">在月亮最暗、最安靜的那一晚，我們不急著向前。一起回到呼吸、回到身體，把過度向外奔忙的頻率，慢慢調回自己。這是一份免費的邀請——給每一個需要喘口氣、也需要被接住的妳。</p>
+    <div class="hero-cta">
+      <a class="btn btn-moon" href="#join">報名最近一場新月聚會</a>
+      <a class="btn btn-ghost" href="#about">先了解一下</a>
+    </div>
+    <div class="next">🌑 下一場新月夜・<b>7 / 14（週二）</b></div>
+  </div>
+</header>
+
+<!-- ============ 是什麼 ============ -->
+<section id="about">
+  <div class="wrap narrow">
+    <div class="sec-head">
+      <span class="kicker">關 於 公 益 女 人 圈</span>
+      <h2>一個不收費、不評判、不販售的圓圈</h2>
+    </div>
+    <p class="lead-quote">
+      「公益」是我們的初心——<br>
+      不為了賣什麼，只想為更多女人，<br>
+      在每個月的新月，撐開一個可以暫停的空間。
+    </p>
+    <p class="body-p">
+      我們是陪產員，也是母親。我們知道，女人的日子常常是向外的：照顧、給予、把自己排在最後。所以我們留下每個月的新月夜，線上相聚，圍成一個圈——在這裡沒有人是專家，每個人都被聽見。妳不需要準備什麼，只要帶著這個月的自己，來就好。
+    </p>
+  </div>
+</section>
+
+<!-- ============ 為什麼新月 ============ -->
+<section class="alt">
+  <div class="wrap">
+    <div class="why">
+      <div class="txt">
+        <span class="kicker" style="color:var(--clay-deep);letter-spacing:.3em;font-size:.8rem;display:block;margin-bottom:12px">為 什 麼 是 新 月</span>
+        <h3>天空最暗的那一晚，是向內的時刻</h3>
+        <p>新月是月相的起點，月亮隱入黑暗、看不見光。在古老的女性智慧裡，這不是空白，而是一個邀請：停下來、向內、休息，然後把願望像種子一樣，輕輕埋進土裡，等待它在接下來的循環裡慢慢長大。</p>
+        <p>女人的身體，本就順著週期流動。當我們願意跟著月亮的節奏過日子——該休息時休息、該萌芽時萌芽——許多人說，心，就安了下來。</p>
+        <div class="note">＊ 這是一種「感受性的節奏練習」，而不是醫療或科學上的療效宣稱。我們邀請妳親自體會，而不是要妳相信。</div>
+      </div>
+      <figure class="pic"><img src="assets/gallery-altar.jpg" alt="新月女人圈的祭壇"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 調頻是什麼 / 流程 ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">我 們 會 一 起 做 什 麼</span>
+      <h2>「調頻」，就是把自己調回自己</h2>
+      <p>一場一小時的線上聚會，跟著三個輕柔的步驟，慢慢回到中心。</p>
+    </div>
+    <div class="flow">
+      <div class="step">
+        <div class="ph">靜</div>
+        <span class="en">Arrive</span>
+        <h3>靜心・呼吸</h3>
+        <p>先把神經系統，從整天的「備戰」狀態，慢慢調回「安在」。閉上眼，回到呼吸，回到身體。</p>
+      </div>
+      <div class="step">
+        <div class="ph">聽</div>
+        <span class="en">Circle</span>
+        <h3>圍圈・分享</h3>
+        <p>輪流說出這個月的累與光。不被打斷、不被評判——被好好聽見，本身就是一種療癒。</p>
+      </div>
+      <div class="step">
+        <div class="ph">種</div>
+        <span class="en">Intention</span>
+        <h3>許願・埋種</h3>
+        <p>為即將展開的新循環，輕輕許下一個意圖。像在新月的黑暗裡，種下一顆只屬於妳的種子。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 形式 ============ -->
+<section class="alt">
+  <div class="wrap narrow">
+    <div class="sec-head">
+      <span class="kicker">聚 會 形 式</span>
+      <h2>線上・新月夜・免費</h2>
+    </div>
+    <div class="facts">
+      <div class="fact"><div class="k">When</div><div class="v">每月新月<small>2026 下半年系列</small></div></div>
+      <div class="fact"><div class="k">Where</div><div class="v">線上<small>報名後寄連結</small></div></div>
+      <div class="fact"><div class="k">How long</div><div class="v">一小時<small>新月當晚</small></div></div>
+      <div class="fact"><div class="k">Cost</div><div class="v">免費<small>公益・不販售</small></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 場次 ============ -->
+<section id="dates">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">新 月 場 次</span>
+      <h2>2026 下半年・新月夜</h2>
+      <p>跟著月亮，每個月一次，為自己留一個晚上。</p>
+    </div>
+    <div class="dates">
+      <div class="date"><div class="d"><b>7/14</b><span>週二</span></div><div class="t">🌑 七月新月・夏的萌芽</div></div>
+      <div class="date"><div class="d"><b>8/13</b><span>週四</span></div><div class="t">🌑 八月新月</div></div>
+      <div class="date"><div class="d"><b>9/11</b><span>週五</span></div><div class="t">🌑 九月新月</div></div>
+      <div class="date"><div class="d"><b>10/8</b><span>週四</span></div><div class="t">🌑 十月新月・秋的收穫</div></div>
+      <div class="date"><div class="d"><b>11/9</b><span>週一</span></div><div class="t">🌑 十一月新月</div></div>
+      <div class="date"><div class="d"><b>12/9</b><span>週三</span></div><div class="t">🌑 十二月新月・冬的回歸</div></div>
+    </div>
+    <p class="sched-note">＊ 各場確切開始時間（平日晚上為主）以報名後的通知為準。</p>
+  </div>
+</section>
+
+<!-- ============ 適合誰 ============ -->
+<section class="alt">
+  <div class="wrap narrow">
+    <div class="sec-head">
+      <span class="kicker">適 合 誰</span>
+      <h2>給每一個想為自己停一下的妳</h2>
+      <p>不需要任何身心靈基礎，也不需要正在孕產的階段。</p>
+    </div>
+    <div class="fit">
+      <span>備孕中的妳</span><span>懷孕中的妳</span><span>產後修復中的妳</span>
+      <span>育兒疲憊的媽媽</span><span>想重新認識自己的女人</span><span>只是想喘口氣的妳</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 報名 CTA ============ -->
+<section id="join">
+  <div class="wrap">
+    <div class="cta-box">
+      <h2>這個新月，來圈子裡坐坐</h2>
+      <p>填一張簡單的報名表，我們會把線上連結與當晚細節寄給妳。免費參加，名額有限，讓我們能好好接住每一位。</p>
+      <a class="btn btn-moon" href="https://forms.gle/fX6ceFYdCaXEwdrf8" target="_blank" rel="noopener" data-form="join">填寫報名表單</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 帶領人 ============ -->
+<section>
+  <div class="wrap narrow">
+    <div class="sec-head" style="margin-bottom:30px">
+      <span class="kicker">帶 領 妳 的 人</span>
+      <h2 style="font-size:1.5rem">欣妙 ＆ 宥妤</h2>
+      <p>這個圓圈，由我們兩個一起為妳撐著。</p>
+    </div>
+    <div class="leaders">
+      <div class="lead-card">
+        <div class="ava"><img src="assets/ava-milliya.png" alt="欣妙"></div>
+        <div>
+          <h3>欣妙 Milliya</h3>
+          <div class="role">陪產員・女性陪伴導師</div>
+          <p>出身奧修靜心門徒家庭，從自己的生產、育兒與人生轉折，走進女人圈與女性能量工作。專長孕產支持、陪產、獨立生產與女性成長陪伴。2024 年成立「欣妙在陪妳工作室」，帶孕產教育、女人圈與舞動靜心。相信每個靈魂都獨一無二，擁有自己的原生智慧。</p>
+          <a class="ig" href="https://instagram.com/birth.with.milliya" target="_blank" rel="noopener">@birth.with.milliya</a>
+        </div>
+      </div>
+      <div class="lead-card">
+        <div class="ava"><img src="assets/ava-yoyu.png" alt="宥妤"></div>
+        <div>
+          <h3>宥妤 Stephanie</h3>
+          <div class="role">瑜伽・神聖女人圈帶領</div>
+          <p>走過孕育、分娩、產後、親密關係與家庭角色的多重轉變與修復。專長瑜伽、覺知孕育、產後修復、神經修復與神聖女人圈帶領。相信身體、相信女人、相信被好好陪伴的力量——透過陪伴而非給答案，幫妳聽見自己身體的智慧。</p>
+          <a class="ig" href="https://instagram.com/everyday_earth_women" target="_blank" rel="noopener">@everyday_earth_women</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Footer ============ -->
+<footer>
+  <div class="brand">生生不息 • 溫柔孕育圈</div>
+  <div>公益女人圈　|　每月新月・線上調頻　|　帶領：欣妙、宥妤</div>
+  <a class="home" href="index.html">← 回到溫柔孕育圈總覽</a>
+  <div class="small">© 2026 Gentle Birthing Circle　·　本頁為活動介紹用途，場次時間以報名通知為準</div>
+</footer>
+
+</body>
+</html>
