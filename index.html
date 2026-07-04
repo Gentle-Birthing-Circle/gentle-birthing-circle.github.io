@@ -12,11 +12,11 @@
 <link href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-tc-webfont@1.7.0/style.css" rel="stylesheet">
 <style>
   :root{
-    --sage:#c99a86;       /* 暖珊瑚褐 — 沉穩副色 */
-    --sage-deep:#a5715e;
+    --sage:#8fa891;       /* 鼠尾草綠 — 對比副色（吸睛）*/
+    --sage-deep:#5f7a64;
     --clay:#f98f77;       /* 珊瑚（主標色）— 主色 */
     --clay-deep:#c27d6a;  /* 副標色 — 小標／次要文字 */
-    --gold:#e0a06f;       /* 暖金駝 — 低調點綴 */
+    --gold:#cba24f;       /* 古董金 — 低調點綴（吸睛）*/
     --ink:#4a3c37;        /* 暖炭 主文字 */
     --ink-soft:#8a7268;
     --cream:#fdf4ef;      /* 暖蜜桃米白 背景 */
@@ -50,7 +50,7 @@
   }
   .btn:hover{transform:translateY(-2px)}
   .btn-primary{background:var(--clay);color:#fff;box-shadow:0 10px 24px -12px var(--clay-deep)}
-  .btn-primary:hover{background:var(--clay-deep)}
+  .btn-primary:hover{background:#ec6a4b}
   .btn-ghost{background:transparent;color:var(--sage-deep);border-color:var(--sage)}
   .btn-ghost:hover{background:var(--sage);color:#fff}
 
@@ -179,14 +179,13 @@
 
   /* ===== Team（精簡版）===== */
   .team{display:flex;justify-content:center;gap:30px;flex-wrap:wrap}
-  .member{text-align:center;width:150px}
+  .member{text-align:center;width:160px}
   .member .ava{
-    width:104px;height:104px;border-radius:50%;margin:0 auto 12px;overflow:hidden;
-    background:transparent;
-    display:flex;align-items:center;justify-content:center;color:var(--clay-deep);
-    font-family:"LXGW WenKai TC",serif;font-size:1.6rem;
+    width:150px;height:150px;border-radius:16px;margin:0 auto 14px;overflow:hidden;
+    background:var(--sand);box-shadow:0 12px 30px -18px rgba(95,76,50,.4);
+    display:flex;align-items:center;justify-content:center;
   }
-  .member .ava img{width:100%;height:100%;object-fit:contain;display:block}
+  .member .ava img{width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block}
   .member h3{font-size:1.1rem;margin-bottom:4px}
   .member .ig{
     display:inline-block;text-decoration:none;
@@ -488,17 +487,17 @@
     </p>
     <div class="team">
       <div class="member">
-        <div class="ava"><img src="assets/ava-milliya.png" alt="欣妙"></div>
+        <div class="ava"><img src="assets/team-milliya.jpg" alt="欣妙"></div>
         <h3>欣妙</h3>
         <a class="ig" href="https://instagram.com/birth.with.milliya" target="_blank" rel="noopener">@birth.with.milliya</a>
       </div>
       <div class="member">
-        <div class="ava"><img src="assets/ava-yoyu.png" alt="宥妤"></div>
+        <div class="ava"><img src="assets/team-yoyu.jpg" alt="宥妤"></div>
         <h3>宥妤</h3>
         <a class="ig" href="https://instagram.com/everyday_earth_women" target="_blank" rel="noopener">@everyday_earth_women</a>
       </div>
       <div class="member">
-        <div class="ava"><img src="assets/ava-yuwen.png" alt="郁文"></div>
+        <div class="ava"><img src="assets/team-yuwen.jpg" alt="郁文"></div>
         <h3>郁文</h3>
         <a class="ig" href="https://instagram.com/you_when_mama" target="_blank" rel="noopener">@you_when_mama</a>
       </div>
