@@ -99,7 +99,8 @@
 
   /* ===== Pillars ===== */
   .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-  .pillar{background:var(--sand);border-radius:var(--radius);padding:30px 24px;text-align:center}
+  .pillar{background:var(--sand);border-radius:var(--radius);padding:30px 24px;text-align:center;position:relative;overflow:hidden}
+  .pillar-deco{position:absolute;top:14px;right:14px;width:56px;height:56px;opacity:.3;pointer-events:none}
   .pillar .num{font-family:"LXGW WenKai TC",serif;font-size:2rem;color:var(--clay);line-height:1}
   .pillar h3{font-size:1.18rem;margin:12px 0 8px}
   .pillar .en{display:block;color:var(--gold);font-size:.72rem;letter-spacing:.1em;margin-bottom:10px}
@@ -299,24 +300,56 @@
     </div>
     <div class="grid4">
       <div class="pillar">
+        <svg class="pillar-deco" viewBox="0 0 100 100" aria-hidden="true" fill="rgba(224,113,79,.14)" stroke="#e0714f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M50 68 C47 55 47 45 50 34 C53 45 53 55 50 68Z"/>
+          <path d="M50 68 C44 57 38 49 30 45 C34 55 40 62 50 68Z"/>
+          <path d="M50 68 C56 57 62 49 70 45 C66 55 60 62 50 68Z"/>
+          <path d="M50 68 C40 63 28 61 18 55 C26 63 36 68 50 68Z"/>
+          <path d="M50 68 C60 63 72 61 82 55 C74 63 64 68 50 68Z"/>
+          <path d="M30 72 Q50 79 70 72" fill="none"/>
+        </svg>
         <div class="num">壹</div>
         <span class="en">Sacredness</span>
         <h3>神聖與尊重</h3>
         <p>每一個成為父母的故事都是神聖的。尊重每一種生產方式與養育選擇，剔除評判與比較。</p>
       </div>
       <div class="pillar">
+        <svg class="pillar-deco" viewBox="0 0 100 100" aria-hidden="true" fill="rgba(224,113,79,.14)" stroke="#e0714f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M50 82 L50 46" fill="none"/>
+          <path d="M50 56 C40 56 29 50 25 39 C37 37 47 45 50 56Z"/>
+          <path d="M50 50 C60 50 71 44 75 33 C63 31 53 39 50 50Z"/>
+        </svg>
         <div class="num">貳</div>
         <span class="en">Empowerment</span>
         <h3>賦權與自主</h3>
         <p>讓每位女性感受到對自己身體與孕育過程的掌控權，敢於尋找最適合自己的溫柔路徑。</p>
       </div>
       <div class="pillar">
+        <svg class="pillar-deco" viewBox="0 0 100 100" aria-hidden="true" fill="rgba(224,113,79,.14)" stroke="#e0714f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="50" y1="36" x2="50" y2="70" fill="none"/>
+          <path d="M50 42 C38 26 20 28 22 42 C24 53 40 52 50 47Z"/>
+          <path d="M50 42 C62 26 80 28 78 42 C76 53 60 52 50 47Z"/>
+          <path d="M50 51 C41 53 27 57 31 68 C37 76 48 66 50 58Z"/>
+          <path d="M50 51 C59 53 73 57 69 68 C63 76 52 66 50 58Z"/>
+          <path d="M50 36 L45 28 M50 36 L55 28" fill="none"/>
+        </svg>
         <div class="num">參</div>
         <span class="en">Healing</span>
         <h3>療癒與轉化</h3>
         <p>述說是一種療癒，聆聽是一種轉化。營造安全溫暖的氛圍，讓身心靈得到安放。</p>
       </div>
       <div class="pillar">
+        <svg class="pillar-deco" viewBox="0 0 100 100" aria-hidden="true">
+          <circle cx="50" cy="50" r="23" fill="none" stroke="#e0714f" stroke-width="2.2"/>
+          <g fill="#e0714f">
+            <circle cx="50" cy="27" r="4.6"/>
+            <circle cx="70" cy="38.5" r="4.6"/>
+            <circle cx="70" cy="61.5" r="4.6"/>
+            <circle cx="50" cy="73" r="4.6"/>
+            <circle cx="30" cy="61.5" r="4.6"/>
+            <circle cx="30" cy="38.5" r="4.6"/>
+          </g>
+        </svg>
         <div class="num">肆</div>
         <span class="en">Connection</span>
         <h3>互助與連結</h3>
