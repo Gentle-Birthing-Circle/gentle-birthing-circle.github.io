@@ -256,6 +256,104 @@
     header.hero{padding:70px 0 56px}
   }
 </style>
+
+<!-- 結構化資料：組織 + 系列活動（幫助 Google 理解並顯示活動版位） -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://gentle-birthing-circle.github.io/#organization",
+      "name": "生生不息・溫柔孕育圈",
+      "alternateName": "Gentle Birthing Circle",
+      "url": "https://gentle-birthing-circle.github.io/",
+      "logo": "https://gentle-birthing-circle.github.io/assets/logo-rose.png",
+      "image": "https://gentle-birthing-circle.github.io/assets/gallery-circle.jpg",
+      "description": "一個尊重每一種孕育路徑、讓故事被聆聽、讓女性找回主體性的支持圓圈，由 Milliya（欣妙）、宥妤、郁文共同帶領。",
+      "sameAs": [
+        "https://instagram.com/birth.with.milliya",
+        "https://instagram.com/everyday_earth_women",
+        "https://instagram.com/you_when_mama"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://gentle-birthing-circle.github.io/#website",
+      "url": "https://gentle-birthing-circle.github.io/",
+      "name": "生生不息・溫柔孕育圈",
+      "inLanguage": "zh-Hant",
+      "publisher": { "@id": "https://gentle-birthing-circle.github.io/#organization" }
+    },
+    {
+      "@type": "Event",
+      "name": "生生不息・線上孕育圈｜小沐 · 高齡媽咪的孕產身心準備指南",
+      "startDate": "2026-08-06T19:30:00+08:00",
+      "endDate": "2026-08-06T21:00:00+08:00",
+      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "location": {
+        "@type": "VirtualLocation",
+        "url": "https://gentle-birthing-circle.github.io/"
+      },
+      "image": "https://gentle-birthing-circle.github.io/assets/gallery-circle.jpg",
+      "description": "放下不孕焦慮！高齡媽咪的孕產身心準備指南。線上孕育圈。",
+      "organizer": { "@id": "https://gentle-birthing-circle.github.io/#organization" },
+      "offers": {
+        "@type": "Offer",
+        "price": "380",
+        "priceCurrency": "TWD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://docs.google.com/forms/d/e/1FAIpQLSeLOhSSDReLf2srwO8XQyy9TGsKk2qJjm4HZQIu9iT5xjtYMQ/viewform"
+      }
+    },
+    {
+      "@type": "Event",
+      "name": "公益女人圈・新月聚會（Womb-Moon 引導師帶領）",
+      "startDate": "2026-08-13T20:00:00+08:00",
+      "endDate": "2026-08-13T21:00:00+08:00",
+      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "location": {
+        "@type": "VirtualLocation",
+        "url": "https://gentle-birthing-circle.github.io/circle.html"
+      },
+      "image": "https://gentle-birthing-circle.github.io/assets/gallery-circle.jpg",
+      "description": "每月新月的免費線上女性圓圈——回到呼吸、回到身體，為新的循環輕輕許一個意圖。",
+      "organizer": { "@id": "https://gentle-birthing-circle.github.io/#organization" },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "TWD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://gentle-birthing-circle.github.io/circle.html"
+      }
+    },
+    {
+      "@type": "Event",
+      "name": "生生不息・線上孕育圈｜Lidia · 身心豐盛的秘密方程式",
+      "startDate": "2026-11-18T19:30:00+08:00",
+      "endDate": "2026-11-18T21:00:00+08:00",
+      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "location": {
+        "@type": "VirtualLocation",
+        "url": "https://gentle-birthing-circle.github.io/"
+      },
+      "image": "https://gentle-birthing-circle.github.io/assets/gallery-circle.jpg",
+      "description": "財務建築師～身心豐盛的秘密方程式。線上孕育圈。",
+      "organizer": { "@id": "https://gentle-birthing-circle.github.io/#organization" },
+      "offers": {
+        "@type": "Offer",
+        "price": "380",
+        "priceCurrency": "TWD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://docs.google.com/forms/d/e/1FAIpQLSeLOhSSDReLf2srwO8XQyy9TGsKk2qJjm4HZQIu9iT5xjtYMQ/viewform"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
