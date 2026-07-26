@@ -200,11 +200,16 @@
   .sched-note{color:var(--ink-soft);font-size:.9rem;text-align:center;margin-top:16px}
 
   /* ===== Speakers ===== */
-  .speakers{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-  .sp{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px 24px;display:flex;gap:16px;align-items:flex-start}
-  .sp .ava{width:48px;height:48px;border-radius:50%;background:linear-gradient(140deg,var(--clay),var(--sage));flex:0 0 48px;display:flex;align-items:center;justify-content:center;color:#fff;font-family:"LXGW WenKai TC",serif;font-size:1.3rem}
-  .sp h3{font-size:1.12rem;margin-bottom:4px}
-  .sp p{font-size:.9rem;color:var(--ink-soft);line-height:1.6}
+  .speakers{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .sp{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:30px 20px 26px;display:flex;flex-direction:column;align-items:center;text-align:center;box-shadow:var(--shadow)}
+  .sp .pic{width:118px;height:118px;border-radius:50%;overflow:hidden;border:3px solid #fff;outline:2px solid rgba(203,162,79,.5);outline-offset:3px;box-shadow:0 12px 26px -12px rgba(160,90,60,.5);margin-bottom:16px}
+  .sp .pic img{width:100%;height:100%;object-fit:cover;display:block}
+  .sp h3{font-size:1.2rem;margin-bottom:8px}
+  .sp h3 span{font-size:.78em;color:var(--ink-soft);font-style:italic;font-family:"Cormorant Garamond",serif;margin-left:4px}
+  .sp .when{display:inline-block;font-size:.82rem;border-radius:999px;padding:4px 16px;margin-bottom:12px;letter-spacing:.02em}
+  .sp .when.on{background:rgba(249,143,119,.16);border:1px solid rgba(224,113,79,.4);color:var(--clay-deep)}
+  .sp .when.of{background:rgba(199,155,69,.16);border:1px solid rgba(169,129,47,.4);color:#a9812f}
+  .sp p{font-size:.92rem;color:var(--ink-soft);line-height:1.7}
 
   /* ===== Recruit CTA ===== */
   .recruit{
@@ -610,7 +615,7 @@
           <tr><td>9 / 11<br><span style="font-weight:400;color:var(--ink-soft);font-size:.82em">20:00–21:00</span></td><td><span class="pill p-charity">公益女人圈</span></td><td>新月聚會・Womb-Moon 引導師</td></tr>
           <tr><td>9 月</td><td><span class="pill p-online">線上孕育圈</span></td><td>朵朵 · 人類圖｜育兒也是育己</td></tr>
           <tr><td>10 / 8<br><span style="font-weight:400;color:var(--ink-soft);font-size:.82em">20:00–21:00</span></td><td><span class="pill p-charity">公益女人圈</span></td><td>新月聚會・Nia（Womb-Moon 引導師）</td></tr>
-          <tr><td>10 月</td><td><span class="pill p-onsite">實體孕育圈</span></td><td>為文 · 看懂寶寶氣質的副食品工作坊</td></tr>
+          <tr><td>10 月</td><td><span class="pill p-onsite">實體孕育圈</span></td><td>為文 · 大寶的生產教育～如何跟大寶一起準備第二胎生產</td></tr>
           <tr><td>11 / 9<br><span style="font-weight:400;color:var(--ink-soft);font-size:.82em">20:00–21:00</span></td><td><span class="pill p-charity">公益女人圈</span></td><td>新月聚會・郁文（Womb-Moon 引導師・認證中）</td></tr>
           <tr><td>11/18<br><span style="font-weight:400;color:var(--ink-soft);font-size:.82em">19:30–21:00</span></td><td><span class="pill p-online">線上孕育圈</span></td><td>Lidia · 財務建築師～身心豐盛的秘密方程式</td></tr>
           <tr><td>12 / 9<br><span style="font-weight:400;color:var(--ink-soft);font-size:.82em">20:00–21:00</span></td><td><span class="pill p-charity">公益女人圈</span></td><td>新月聚會・Joyce（Womb-Moon 引導師）</td></tr>
@@ -618,7 +623,7 @@
         </tbody>
       </table>
     </div>
-    <p class="sched-note" style="color:var(--clay-deep);font-weight:500">💰 線上孕育圈 單場 NT$380（早鳥／揪團 NT$330）　·　公益女人圈 免費　·　實體孕育圈 場地與費用 → <a href="https://rent-space.kumudsfreqs.live/#pricing" target="_blank" rel="noopener" style="color:var(--clay-deep);text-decoration:underline">檢視場地</a></p>
+    <p class="sched-note" style="color:var(--clay-deep);font-weight:500">💰 線上孕育圈 單場 NT$380（早鳥／揪團 NT$330）　·　公益女人圈 免費　·　實體孕育圈 NT$1,200（早鳥 NT$888・兩人同行 NT$1,888）　·　<a href="https://rent-space.kumudsfreqs.live/#pricing" target="_blank" rel="noopener" style="color:var(--clay-deep);text-decoration:underline">檢視場地</a></p>
     <p class="sched-note">＊ 公益女人圈每場統一 20:00–21:00（新月當晚）。線上／實體場部分日期與主題持續調整中，9–12 月亦開放講者提案，確切時間以報名通知為準。</p>
     <div style="text-align:center;margin-top:30px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
       <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSeLOhSSDReLf2srwO8XQyy9TGsKk2qJjm4HZQIu9iT5xjtYMQ/viewform" target="_blank" rel="noopener" data-form="join">填寫活動報名表單</a>
@@ -636,12 +641,12 @@
       <p>橫跨孕育、親子、賦能與身心靈的溫柔力量。</p>
     </div>
     <div class="speakers">
-      <div class="sp"><div class="ava">沐</div><div><h3>小沐</h3><p>放下備孕焦慮 · 高齡媽咪的孕產身心準備指南</p></div></div>
-      <div class="sp"><div class="ava">朵</div><div><h3>朵朵</h3><p>人類圖・育兒也是育己</p></div></div>
-      <div class="sp"><div class="ava">L</div><div><h3>Lidia</h3><p>財務建築師 · 身心豐盛的秘密方程式</p></div></div>
-      <div class="sp"><div class="ava">C</div><div><h3>Chenti</h3><p>她如何透過正向書寫顯化夢想</p></div></div>
-      <div class="sp"><div class="ava">文</div><div><h3>為文</h3><p>看懂寶寶氣質的副食品工作坊</p></div></div>
-      <div class="sp"><div class="ava">綸</div><div><h3>宥綸</h3><p>成為一個新的家的源頭・單親家庭的療癒與重生</p></div></div>
+      <div class="sp"><div class="pic"><img src="assets/sp-xiaomu.jpg" alt="小沐" style="object-position:center 20%"></div><h3>小沐 <span>Mumu</span></h3><span class="when on">8/6 · 線上</span><p>放下備孕焦慮・高齡媽咪的孕產身心準備指南</p></div>
+      <div class="sp"><div class="pic"><img src="assets/sp-youlun.jpg" alt="宥綸" style="object-position:center 22%"></div><h3>宥綸</h3><span class="when of">8/18 · 實體</span><p>成為一個新的家的源頭・單親家庭的療癒與重生</p></div>
+      <div class="sp"><div class="pic"><img src="assets/sp-duoduo.jpg" alt="朵朵" style="object-position:center 28%"></div><h3>朵朵</h3><span class="when on">9 月 · 線上</span><p>人類圖・育兒也是育己</p></div>
+      <div class="sp"><div class="pic"><img src="assets/sp-weiwen.jpg" alt="為文" style="object-position:center 26%"></div><h3>為文</h3><span class="when of">10 月 · 實體</span><p>大寶的生產教育～如何跟大寶一起準備第二胎生產</p></div>
+      <div class="sp"><div class="pic"><img src="assets/sp-lidia.jpg" alt="Lidia" style="object-position:center 18%"></div><h3>Lidia</h3><span class="when on">11/18 · 線上</span><p>財務建築師・身心豐盛的秘密方程式</p></div>
+      <div class="sp"><div class="pic"><img src="assets/sp-chenti.jpg" alt="Chenti" style="object-position:46% 26%"></div><h3>Chenti</h3><span class="when of">12/18 · 實體</span><p>透過正向書寫・顯化夢想</p></div>
     </div>
   </div>
 </section>
