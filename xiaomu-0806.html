@@ -138,6 +138,24 @@
   .myth-item .ans .quote{margin-top:16px;color:var(--gold-deep);font-weight:500;font-size:1.06rem;border-left:3px solid var(--gold);padding-left:16px;line-height:1.6}
   .quiz-foot{text-align:center;color:var(--ink-soft);margin:38px auto 0;max-width:520px;line-height:1.85}
   .quiz-foot b{color:var(--sage-deep)}
+  /* 互動測驗 */
+  .q-form{max-width:640px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+  .q-form[hidden]{display:none}
+  .q-opt{display:flex;gap:14px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:17px 22px;cursor:pointer;transition:border-color .2s,background .2s}
+  .q-opt input{margin-top:4px;width:22px;height:22px;accent-color:var(--sage-deep);flex:0 0 auto;cursor:pointer}
+  .q-opt span{font-size:1.04rem;color:var(--ink);line-height:1.55}
+  .q-opt.on{border-color:var(--sage);background:rgba(127,141,105,.09)}
+  #qBtn{display:block;margin:34px auto 0}
+  .q-result{max-width:640px;margin:0 auto;text-align:center}
+  .qr-count{font-size:1.16rem;color:var(--ink);margin-bottom:10px}
+  .qr-theme{font-size:1.3rem;color:var(--ink-soft);line-height:1.6;margin-bottom:22px}
+  .qr-theme .hl{display:inline-block;margin-top:8px;font-size:1.7rem;color:var(--sage-deep);font-weight:600}
+  .qr-truth{text-align:left;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px 30px;color:var(--ink-soft);line-height:1.9;box-shadow:var(--shadow)}
+  .qr-truth .quote{margin-top:16px;color:var(--gold-deep);font-weight:500;font-size:1.1rem;border-left:3px solid var(--gold);padding-left:16px;line-height:1.6}
+  .qr-all{max-width:640px;margin:26px auto 0;text-align:left}
+  .qr-all>summary{cursor:pointer;color:var(--sage-deep);font-weight:500;text-align:center;list-style:none}
+  .qr-all>summary::-webkit-details-marker{display:none}
+  .q-restart{background:none;border:none;color:var(--sage-deep);text-decoration:underline;cursor:pointer;font-family:inherit;font-size:.98rem;margin-top:18px}
   @media(max-width:600px){ .myth-item .ans{padding-left:26px} }
   .fit-tags span{background:rgba(127,141,105,.12);border:1px solid var(--sage-soft);color:var(--sage-deep);border-radius:999px;padding:14px 30px;font-size:1.02rem}
 
@@ -255,40 +273,79 @@
 <section class="quiz">
   <div class="wrap">
     <div class="sec-head">
-      <div class="kicker">備 孕 迷 思 ・ 小 檢 測</div>
-      <h2>妳，也曾這樣想過嗎？</h2>
+      <div class="kicker">備 孕 迷 思 ・ 溫 柔 小 測 驗</div>
+      <h2>這些心聲，也住在妳心裡嗎？</h2>
     </div>
-    <p class="quiz-lead">點開每一個心裡的聲音，讓我們一起，把它輕輕轉念。</p>
-    <div class="myth-list">
-      <details class="myth-item" open>
-        <summary><span class="qmark">＋</span><div class="q"><span class="myth-tag">年齡與身體</span>「過了黃金生育年齡，我的身體是不是來不及了？」</div></summary>
-        <div class="ans">身分證上的數字，不代表妳身體的實際年齡。短期內，飲食、運動與呼吸能為身體注入新的活力；深層的身心健康，則需要妳給自己一段時間，好好準備、溫柔沉澱。
-          <div class="quote">給身體一點時間，它會用最好的狀態回應妳。</div>
-        </div>
-      </details>
-      <details class="myth-item">
-        <summary><span class="qmark">＋</span><div class="q"><span class="myth-tag">作息與節奏</span>「備孕一定要按表操課、大補特補嗎？」</div></summary>
-        <div class="ans">過度的限制與補品，有時反而成為身體的負擔。比起精確計算排卵期，維持讓自己舒心的生活節奏、補足基礎營養與適度放鬆，才是孕育新生命最肥沃的土壤。
-          <div class="quote">備孕不是考驗意志力的功課，而是找回身心平衡的開始。</div>
-        </div>
-      </details>
-      <details class="myth-item">
-        <summary><span class="qmark">＋</span><div class="q"><span class="myth-tag">心態與情緒</span>「大家都叫我『放輕鬆』，但我做不到怎麼辦？」</div></summary>
-        <div class="ans">強迫自己「放輕鬆」，往往是最大的壓力來源。焦慮與不安都是正常的，不需要否定自己的感受。接納當下的情緒、尋求溫柔的支持，就是對自己最好的照顧。
-          <div class="quote">妳不需要完美，只需要真實地接納自己。</div>
-        </div>
-      </details>
-      <details class="myth-item">
-        <summary><span class="qmark">＋</span><div class="q"><span class="myth-tag">伴侶與關係</span>「備孕是女人的事，伴侶只要『配合交作業』就好？」</div></summary>
-        <div class="ans">懷孕，是兩個人的旅程。對方的飲食、作息與心理狀態同樣重要。當兩人心靈相通、共同承擔與理解，備孕會成為感情加溫的契機。
-          <div class="quote">這不是一個人的孤軍奮戰，而是兩個人的攜手同行。</div>
-        </div>
-      </details>
+    <p class="quiz-lead">勾選每一句曾在妳心裡響起的話——<br>沒有對錯，只有妳，值得被溫柔回應。</p>
+
+    <div class="q-form" id="qForm">
+      <label class="q-opt"><input type="checkbox" data-theme="age"><span>「都幾歲了，是不是已經來不及了？」</span></label>
+      <label class="q-opt"><input type="checkbox" data-theme="age"><span>「我的身體，是不是已經不夠好了？」</span></label>
+      <label class="q-opt"><input type="checkbox" data-theme="rhythm"><span>「是不是要嚴格按表操課、精準算排卵，才會成功？」</span></label>
+      <label class="q-opt"><input type="checkbox" data-theme="rhythm"><span>「我是不是補得不夠、還不夠努力？」</span></label>
+      <label class="q-opt"><input type="checkbox" data-theme="emotion"><span>「大家都叫我放輕鬆，但我就是做不到。」</span></label>
+      <label class="q-opt"><input type="checkbox" data-theme="emotion"><span>「每次月經來，我都好失落、好自責。」</span></label>
+      <label class="q-opt"><input type="checkbox" data-theme="partner"><span>「好像只有我一個人在努力、在焦慮。」</span></label>
+      <label class="q-opt"><input type="checkbox" data-theme="partner"><span>「這些心事，我很難跟另一半說出口。」</span></label>
+      <button class="cta-btn" id="qBtn" type="button">給我一段溫柔的回應 →</button>
     </div>
-    <p class="quiz-foot">中了幾個呢？沒關係——<b>8/6 這一晚，小沐陪妳把這些焦慮，一個一個放下。</b></p>
-    <div style="text-align:center;margin-top:26px"><a class="cta-btn" href="https://docs.google.com/forms/d/e/1FAIpQLScZFgBt009g8beWMlKvjC7bDrurinRW20B3VlzPcdEWIZRrbA/viewform" target="_blank" rel="noopener">立即報名 →</a></div>
+
+    <div class="q-result" id="qResult" hidden>
+      <div class="qr-count" id="qrCount"></div>
+      <div class="qr-theme" id="qrTheme"></div>
+      <div class="qr-truth" id="qrTruth"><p id="qrTruthText"></p><div class="quote" id="qrQuote"></div></div>
+      <details class="qr-all">
+        <summary>＋ 展開全部四個溫柔轉念</summary>
+        <div class="myth-list" style="margin-top:18px">
+          <details class="myth-item"><summary><span class="qmark">＋</span><div class="q"><span class="myth-tag">年齡與身體</span>「過了黃金生育年齡，我的身體是不是來不及了？」</div></summary><div class="ans">身分證上的數字，不代表妳身體的實際年齡。飲食、運動與呼吸能為身體注入新的活力；深層的身心健康，則需要妳給自己一段時間，好好準備、溫柔沉澱。<div class="quote">給身體一點時間，它會用最好的狀態回應妳。</div></div></details>
+          <details class="myth-item"><summary><span class="qmark">＋</span><div class="q"><span class="myth-tag">作息與節奏</span>「備孕一定要按表操課、大補特補嗎？」</div></summary><div class="ans">過度的限制與補品，有時反而成為身體的負擔。比起精確計算排卵期，維持舒心的生活節奏、補足基礎營養與適度放鬆，才是孕育新生命最肥沃的土壤。<div class="quote">備孕不是考驗意志力的功課，而是找回身心平衡的開始。</div></div></details>
+          <details class="myth-item"><summary><span class="qmark">＋</span><div class="q"><span class="myth-tag">心態與情緒</span>「大家都叫我『放輕鬆』，但我做不到怎麼辦？」</div></summary><div class="ans">強迫自己「放輕鬆」，往往是最大的壓力來源。焦慮與失落都是正常的，不需要否定自己的感受。接納當下的情緒、尋求溫柔的支持，就是對自己最好的照顧。<div class="quote">妳不需要完美，只需要真實地接納自己。</div></div></details>
+          <details class="myth-item"><summary><span class="qmark">＋</span><div class="q"><span class="myth-tag">伴侶與關係</span>「備孕是女人的事，伴侶只要『配合交作業』就好？」</div></summary><div class="ans">懷孕，是兩個人的旅程。對方的飲食、作息與心理狀態同樣重要。當兩人心靈相通、共同承擔與理解，備孕會成為感情加溫的契機。<div class="quote">這不是一個人的孤軍奮戰，而是兩個人的攜手同行。</div></div></details>
+        </div>
+      </details>
+      <p class="quiz-foot" id="qrFoot"></p>
+      <div style="text-align:center;margin-top:24px"><a class="cta-btn" href="https://docs.google.com/forms/d/e/1FAIpQLScZFgBt009g8beWMlKvjC7bDrurinRW20B3VlzPcdEWIZRrbA/viewform" target="_blank" rel="noopener">立即報名 8/6 →</a></div>
+      <div style="text-align:center"><button class="q-restart" id="qRestart" type="button">重新測一次</button></div>
+    </div>
   </div>
 </section>
+<script>
+(function(){
+  var T={
+    age:{name:'年齡與身體',truth:'身分證上的數字，不代表妳身體的實際年齡。飲食、運動與呼吸能為身體注入新的活力；而深層的身心健康，需要妳給自己一段時間，好好準備、溫柔沉澱。',quote:'給身體一點時間，它會用最好的狀態回應妳。'},
+    rhythm:{name:'作息與節奏',truth:'過度的限制與補品，有時反而成為身體的負擔。比起精確計算排卵期，維持舒心的生活節奏、補足基礎營養與適度放鬆，才是孕育新生命最肥沃的土壤。',quote:'備孕不是考驗意志力的功課，而是找回身心平衡的開始。'},
+    emotion:{name:'心態與情緒',truth:'強迫自己「放輕鬆」，往往是最大的壓力來源。焦慮與失落都是正常的，不需要否定自己的感受。接納當下的情緒、尋求溫柔的支持，就是對自己最好的照顧。',quote:'妳不需要完美，只需要真實地接納自己。'},
+    partner:{name:'伴侶與關係',truth:'懷孕，是兩個人的旅程。對方的飲食、作息與心理狀態同樣重要。當兩人心靈相通、共同承擔與理解，備孕會成為感情加溫的契機。',quote:'這不是一個人的孤軍奮戰，而是兩個人的攜手同行。'}
+  };
+  var form=document.getElementById('qForm'), res=document.getElementById('qResult');
+  form.addEventListener('change',function(e){ var l=e.target.closest('.q-opt'); if(l) l.classList.toggle('on',e.target.checked); });
+  document.getElementById('qBtn').addEventListener('click',function(){
+    var checked=[].slice.call(form.querySelectorAll('input:checked'));
+    var c={age:0,rhythm:0,emotion:0,partner:0}; checked.forEach(function(x){c[x.getAttribute('data-theme')]++;});
+    var n=checked.length;
+    var cnt=document.getElementById('qrCount'), th=document.getElementById('qrTheme'),
+        tt=document.getElementById('qrTruthText'), qq=document.getElementById('qrQuote'),
+        ft=document.getElementById('qrFoot'), box=document.getElementById('qrTruth');
+    if(n===0){
+      cnt.textContent='此刻，妳的心很穩——真好。💛';
+      th.innerHTML=''; box.style.display='none';
+      ft.innerHTML='如果哪天，某個擔心悄悄浮現——<b>8/6，小沐都在這裡等妳。</b>';
+    }else{
+      var top='age',max=-1; for(var k in c){ if(c[k]>max){max=c[k];top=k;} }
+      cnt.textContent='妳勾了 '+n+' 句——每一句，都是很正常的擔心。💛';
+      th.innerHTML='而此刻，最常在妳心裡出現的是<br><span class="hl">'+T[top].name+'</span>';
+      box.style.display=''; tt.textContent=T[top].truth; qq.textContent='『'+T[top].quote+'』';
+      ft.innerHTML='想被更完整地接住？<b>8/6 這一晚，小沐陪妳一句一句放下。</b>';
+    }
+    form.hidden=true; res.hidden=false; res.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+  document.getElementById('qRestart').addEventListener('click',function(){
+    form.querySelectorAll('input:checked').forEach(function(x){x.checked=false;});
+    form.querySelectorAll('.q-opt.on').forEach(function(l){l.classList.remove('on');});
+    res.hidden=true; form.hidden=false; form.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+})();
+</script>
 
 <section class="info">
   <div class="wrap">
