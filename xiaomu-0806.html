@@ -122,6 +122,23 @@
 
   /* ===== Fit ===== */
   .fit-tags{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:8px}
+
+  /* ===== 迷思小檢測（互動手風琴）===== */
+  .quiz{background:linear-gradient(180deg,var(--cream-hi),var(--ivory))}
+  .quiz-lead{text-align:center;color:var(--ink-soft);max-width:540px;margin:-18px auto 40px;font-size:1.02rem}
+  .myth-list{max-width:640px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+  .myth-item{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+  .myth-item summary{list-style:none;cursor:pointer;padding:24px 26px;display:flex;gap:16px;align-items:flex-start}
+  .myth-item summary::-webkit-details-marker{display:none}
+  .myth-item .qmark{flex:0 0 auto;width:34px;height:34px;border-radius:50%;background:rgba(127,141,105,.13);border:1px solid var(--sage-soft);color:var(--sage-deep);display:flex;align-items:center;justify-content:center;font-size:1.3rem;line-height:1;transition:transform .25s,background .25s,color .25s}
+  .myth-item[open] .qmark{transform:rotate(45deg);background:var(--sage-deep);color:#fff;border-color:var(--sage-deep)}
+  .myth-item .q{font-size:1.1rem;color:var(--ink);font-weight:500;line-height:1.55}
+  .myth-item .myth-tag{display:block;font-size:.78rem;letter-spacing:.12em;color:var(--gold-deep);margin-bottom:6px;font-weight:600}
+  .myth-item .ans{padding:2px 26px 28px 76px;color:var(--ink-soft);line-height:1.9;font-size:1rem}
+  .myth-item .ans .quote{margin-top:16px;color:var(--gold-deep);font-weight:500;font-size:1.06rem;border-left:3px solid var(--gold);padding-left:16px;line-height:1.6}
+  .quiz-foot{text-align:center;color:var(--ink-soft);margin:38px auto 0;max-width:520px;line-height:1.85}
+  .quiz-foot b{color:var(--sage-deep)}
+  @media(max-width:600px){ .myth-item .ans{padding-left:26px} }
   .fit-tags span{background:rgba(127,141,105,.12);border:1px solid var(--sage-soft);color:var(--sage-deep);border-radius:999px;padding:14px 30px;font-size:1.02rem}
 
   /* ===== Info ===== */
@@ -232,6 +249,44 @@
       <h2>適合對象</h2>
     </div>
     <div class="fit-tags"><span>想懷孕的妳</span><span>高齡備孕中</span><span>正在孕期的妳</span></div>
+  </div>
+</section>
+
+<section class="quiz">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">備 孕 迷 思 ・ 小 檢 測</div>
+      <h2>妳，也曾這樣想過嗎？</h2>
+    </div>
+    <p class="quiz-lead">點開每一個心裡的聲音，讓我們一起，把它輕輕轉念。</p>
+    <div class="myth-list">
+      <details class="myth-item" open>
+        <summary><span class="qmark">＋</span><div class="q"><span class="myth-tag">年齡與身體</span>「過了黃金生育年齡，我的身體是不是來不及了？」</div></summary>
+        <div class="ans">身分證上的數字，不代表妳身體的實際年齡。短期內，飲食、運動與呼吸能為身體注入新的活力；深層的身心健康，則需要妳給自己一段時間，好好準備、溫柔沉澱。
+          <div class="quote">給身體一點時間，它會用最好的狀態回應妳。</div>
+        </div>
+      </details>
+      <details class="myth-item">
+        <summary><span class="qmark">＋</span><div class="q"><span class="myth-tag">作息與節奏</span>「備孕一定要按表操課、大補特補嗎？」</div></summary>
+        <div class="ans">過度的限制與補品，有時反而成為身體的負擔。比起精確計算排卵期，維持讓自己舒心的生活節奏、補足基礎營養與適度放鬆，才是孕育新生命最肥沃的土壤。
+          <div class="quote">備孕不是考驗意志力的功課，而是找回身心平衡的開始。</div>
+        </div>
+      </details>
+      <details class="myth-item">
+        <summary><span class="qmark">＋</span><div class="q"><span class="myth-tag">心態與情緒</span>「大家都叫我『放輕鬆』，但我做不到怎麼辦？」</div></summary>
+        <div class="ans">強迫自己「放輕鬆」，往往是最大的壓力來源。焦慮與不安都是正常的，不需要否定自己的感受。接納當下的情緒、尋求溫柔的支持，就是對自己最好的照顧。
+          <div class="quote">妳不需要完美，只需要真實地接納自己。</div>
+        </div>
+      </details>
+      <details class="myth-item">
+        <summary><span class="qmark">＋</span><div class="q"><span class="myth-tag">伴侶與關係</span>「備孕是女人的事，伴侶只要『配合交作業』就好？」</div></summary>
+        <div class="ans">懷孕，是兩個人的旅程。對方的飲食、作息與心理狀態同樣重要。當兩人心靈相通、共同承擔與理解，備孕會成為感情加溫的契機。
+          <div class="quote">這不是一個人的孤軍奮戰，而是兩個人的攜手同行。</div>
+        </div>
+      </details>
+    </div>
+    <p class="quiz-foot">中了幾個呢？沒關係——<b>8/6 這一晚，小沐陪妳把這些焦慮，一個一個放下。</b></p>
+    <div style="text-align:center;margin-top:26px"><a class="cta-btn" href="https://docs.google.com/forms/d/e/1FAIpQLScZFgBt009g8beWMlKvjC7bDrurinRW20B3VlzPcdEWIZRrbA/viewform" target="_blank" rel="noopener">立即報名 →</a></div>
   </div>
 </section>
 
