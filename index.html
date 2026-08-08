@@ -377,6 +377,12 @@
   .carousel .dots{position:absolute;bottom:14px;right:14px;display:flex;gap:7px}
   .carousel .dots i{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.55);cursor:pointer;transition:background .2s}
   .carousel .dots i.on{background:#fff}
+  .carousel .dots{z-index:4}
+  .carousel .slide-link{position:absolute;inset:0;z-index:3}
+  .carousel .ev-cap{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:46px 20px 18px;text-align:left;color:#fff;background:linear-gradient(to top,rgba(74,60,55,.92),rgba(74,60,55,.28),transparent);font-family:"LXGW WenKai TC","Noto Serif TC",serif}
+  .carousel .ev-cap .badge{display:inline-block;background:var(--clay);color:#fff;font-family:"Noto Serif TC",serif;font-size:.76rem;font-weight:600;padding:4px 13px;border-radius:999px;margin-bottom:8px;letter-spacing:.02em}
+  .carousel .ev-cap .t{display:block;font-size:1.16rem;line-height:1.35}
+  .carousel .ev-cap .go{display:inline-block;margin-top:7px;font-size:.86rem;color:#ffe9dc;font-family:"Noto Serif TC",serif}
   .iq-text .kicker{color:var(--clay-deep);letter-spacing:.3em;font-size:.8rem;display:block;margin-bottom:10px}
   .iq-text h2{font-size:clamp(1.55rem,4.5vw,2.05rem);margin-bottom:14px;color:var(--ink)}
   .iq-text p{color:var(--ink-soft);margin-bottom:18px}
@@ -398,7 +404,10 @@
     <div class="iq-grid">
       <div class="carousel" id="iqCarousel">
         <div class="slides">
-          <figure class="on"><img src="assets/gallery-circle.jpg" alt="女人圍圈分享故事" loading="lazy"><figcaption>圍圈・聆聽彼此的故事</figcaption></figure>
+          <figure class="on"><img src="assets/sp-youlun.jpg" alt="宥綸・成為一個新的家的源頭" loading="lazy" style="object-position:center 20%"><a class="slide-link" href="youlun/" aria-label="宥綸 8/18 實體場・看介紹與報名"></a><figcaption class="ev-cap"><span class="badge">8/18（二）・實體</span><span class="t">宥綸・成為一個新的家的源頭</span><span class="go">看介紹與報名 →</span></figcaption></figure>
+          <figure><img src="assets/xiaomu.jpg" alt="小沐・放下備孕焦慮" loading="lazy" style="object-position:center 18%"><a class="slide-link" href="xiaomu-0806.html" aria-label="小沐 8/26 線上場・看介紹與報名"></a><figcaption class="ev-cap"><span class="badge">8/26（三）・線上</span><span class="t">小沐・放下備孕焦慮</span><span class="go">看介紹與報名 →</span></figcaption></figure>
+          <figure><img src="assets/lidia-bookstore.jpg" alt="Lidia・身心豐盛的秘密方程式" loading="lazy" style="object-position:center 30%"><a class="slide-link" href="lidia-1118.html" aria-label="Lidia 11/18 線上場・看介紹與報名"></a><figcaption class="ev-cap"><span class="badge">11/18（三）・線上</span><span class="t">Lidia・身心豐盛的秘密方程式</span><span class="go">看介紹與報名 →</span></figcaption></figure>
+          <figure><img src="assets/gallery-circle.jpg" alt="女人圍圈分享故事" loading="lazy"><figcaption>圍圈・聆聽彼此的故事</figcaption></figure>
           <figure><img src="assets/gallery-altar.jpg" alt="新月女人圈的祭壇" loading="lazy"><figcaption>新月・為自己留一個晚上</figcaption></figure>
           <figure><img src="assets/gallery-ritual.jpg" alt="紅線祈福儀式" loading="lazy"><figcaption>紅線・把祝福繫上彼此</figcaption></figure>
           <figure><img src="assets/gallery-dance.jpg" alt="媽媽寶寶舞動工作坊" loading="lazy"><figcaption>舞動・回到自己的身體</figcaption></figure>
