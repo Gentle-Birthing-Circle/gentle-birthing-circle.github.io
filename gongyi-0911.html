@@ -53,11 +53,13 @@ a{color:inherit}
 .btn-solid:hover{background:#95685d}
 
 /* ===== Hero ===== */
-header.hero{position:relative;overflow:hidden;text-align:center;color:#f3ece2;padding:76px 0 82px;
-  background:
-    radial-gradient(60% 50% at 50% 8%, rgba(191,164,111,.20), transparent 60%),
-    radial-gradient(80% 60% at 80% 100%, rgba(200,154,146,.20), transparent 60%),
-    linear-gradient(165deg,var(--night),var(--night-2) 70%,#4a3f44);}
+header.hero{position:relative;overflow:hidden;text-align:center;color:#f3ece2;
+  padding:0 0 54px;background:#1e1917;}
+.hero-kv{display:block;width:100%;max-width:640px;margin:0 auto}
+@media(min-width:680px){header.hero{padding:44px 0 54px;
+  background:radial-gradient(60% 50% at 50% 0%, rgba(191,164,111,.14), transparent 62%),
+    linear-gradient(165deg,#241f21,#1e1917 70%,#2a2320);}
+  .hero-kv{border-radius:18px;box-shadow:0 30px 80px -34px rgba(0,0,0,.9)}}
 .hero-logo{width:104px;margin:0 auto 16px;opacity:.96;filter:drop-shadow(0 10px 24px rgba(0,0,0,.4))}
 .eyebrow{letter-spacing:.5em;font-size:.76rem;color:#d8c19a;font-family:"Cormorant Garamond",serif;
   text-transform:uppercase;margin-bottom:18px;padding-left:.5em}
@@ -67,7 +69,7 @@ header.hero h1{font-size:clamp(2.1rem,7vw,3.4rem);color:#fbf6ee;line-height:1.42
 .hero-sub{font-size:clamp(1rem,3vw,1.18rem);color:#e6c9b6;margin-top:18px;letter-spacing:.06em}
 .hero-meta{margin-top:30px;color:#bcacb3;font-size:.98rem;letter-spacing:.04em;line-height:2}
 .hero-meta b{color:#e6c9b6;font-weight:500}
-.hero-cta{margin-top:30px;display:flex;gap:13px;justify-content:center;flex-wrap:wrap}
+.hero-cta{margin-top:34px;display:flex;gap:13px;justify-content:center;flex-wrap:wrap}
 
 section{padding:76px 0}
 section.alt{background:linear-gradient(180deg,rgba(255,255,255,.6),rgba(248,242,233,.34))}
@@ -141,29 +143,12 @@ footer .flogo{width:76px;margin:0 auto 18px;opacity:.72}
 <body>
 
 <header class="hero">
-  <div class="wrap">
-    <img class="hero-logo" src="assets/logo-rose.png" alt="生生不息・溫柔孕育圈">
-    <div class="eyebrow">Gentle Birthing Circle</div>
-    <div class="zodiac">🌑 公 益 女 人 圈 ・ 處 女 座 新 月</div>
-    <h1>我是不是<br>做得不夠？</h1>
-    <p class="hero-sub">那句話，今晚我們一起放下</p>
-    <div class="hero-meta">
-      <b>9 / 11（五）20:00–21:00</b><br>
-      線上 Zoom　·　<b>免費</b>　·　由 Womb-Moon 引導師帶領
-    </div>
-    <div class="hero-cta">
-      <a class="btn btn-moon" href="https://forms.gle/F25Yv83hYLeRgEX97" target="_blank" rel="noopener">報名這一場</a>
-    </div>
+  <img class="hero-kv" src="assets/kv-0911.jpg"
+    alt="9/11（五）20:00 公益女人圈・處女座新月《我是不是做得不夠》——那句話，今晚我們一起放下。線上 Zoom・免費・名額有限">
+  <div class="hero-cta">
+    <a class="btn btn-moon" href="https://forms.gle/F25Yv83hYLeRgEX97" target="_blank" rel="noopener">報名這一場</a>
   </div>
 </header>
-
-<!-- ============ 這個月的主視覺 ============ -->
-<section style="padding:56px 0 10px">
-  <div class="wrap" style="max-width:560px">
-    <img src="assets/kv-0911.jpg" alt="9/11 處女座新月・我是不是做得不夠"
-      style="width:100%;border-radius:20px;box-shadow:0 22px 60px -26px rgba(60,40,45,.6)">
-  </div>
-</section>
 
 <!-- ============ 引言 ============ -->
 <section>
