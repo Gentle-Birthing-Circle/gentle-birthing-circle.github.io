@@ -54,10 +54,8 @@ a{color:inherit}
 
 /* ===== Hero ===== */
 header.hero{position:relative;overflow:hidden;text-align:center;color:#f3ece2;
-  padding:0 0 54px;background:#1e1917;}
-.hero-kv{display:block;width:100%;max-width:640px;margin:0 auto}
-@media(min-width:680px){header.hero{padding:0 0 54px;background:#1e1917;}
-  .hero-kv{border-radius:0;box-shadow:none}}
+  padding:0 0 52px;background:#1e1917;}
+.hero-kv{display:block;width:100%;height:auto;margin:0;border-radius:0;box-shadow:none}
 .hero-logo{width:104px;margin:0 auto 16px;opacity:.96;filter:drop-shadow(0 10px 24px rgba(0,0,0,.4))}
 .eyebrow{letter-spacing:.5em;font-size:.76rem;color:#d8c19a;font-family:"Cormorant Garamond",serif;
   text-transform:uppercase;margin-bottom:18px;padding-left:.5em}
@@ -94,10 +92,14 @@ section.alt{background:linear-gradient(180deg,rgba(255,255,255,.6),rgba(248,242,
 
 /* ===== 星象 ===== */
 .stars{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
-.star{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px;box-shadow:var(--shadow)}
-.star .sym{font-size:1.6rem;color:var(--gold);margin-bottom:10px;font-family:"Cormorant Garamond",serif}
-.star h3{font-size:1.08rem;margin-bottom:10px;color:var(--clay-deep)}
+.star{position:relative;overflow:hidden;background:var(--card);border:1px solid var(--line);
+  border-radius:var(--radius);padding:34px 28px 30px;box-shadow:var(--shadow)}
+.star .sym{position:absolute;right:-16px;top:-30px;font-size:170px;line-height:1;
+  color:var(--gold);opacity:.17;font-family:"Noto Serif TC",serif;pointer-events:none;user-select:none}
+.star h3,.star p{position:relative;z-index:2}
+.star h3{font-size:1.14rem;margin-bottom:12px;color:var(--clay-deep)}
 .star p{font-size:.97rem;color:var(--ink-soft);line-height:1.85}
+@media(max-width:640px){.star .sym{font-size:140px;right:-10px;top:-24px}}
 
 /* ===== 適合對象 ===== */
 .who{max-width:620px;margin:0 auto;display:flex;flex-direction:column;gap:13px}
@@ -141,8 +143,11 @@ footer .flogo{width:76px;margin:0 auto 18px;opacity:.72}
 <body>
 
 <header class="hero">
-  <img class="hero-kv" src="assets/kv-0911.jpg"
-    alt="9/11（五）20:00 公益女人圈・處女座新月《我是不是做得不夠》——那句話，今晚我們一起放下。線上 Zoom・免費・名額有限">
+  <picture>
+    <source media="(min-width:680px)" srcset="assets/og-gongyi-0911.jpg">
+    <img class="hero-kv" src="assets/kv-0911.jpg"
+      alt="9/11（五）20:00 公益女人圈・處女座新月《我是不是做得不夠》——那句話，今晚我們一起放下。線上 Zoom・免費・名額有限">
+  </picture>
   <div class="hero-cta">
     <a class="btn btn-moon" href="https://forms.gle/F25Yv83hYLeRgEX97" target="_blank" rel="noopener">報名這一場</a>
   </div>
