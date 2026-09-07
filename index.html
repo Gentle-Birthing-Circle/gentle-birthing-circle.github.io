@@ -183,6 +183,24 @@
   .p-onsite{background:var(--clay)}
   .p-charity{background:var(--gold)}
   .sched-note{color:var(--ink-soft);font-size:.9rem;text-align:center;margin-top:16px}
+  /* 過去的場次 */
+  .past{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+  .pastcard{background:var(--card);border:1px solid var(--line);border-radius:18px;
+    padding:26px 24px 22px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:12px}
+  .pastcard .top{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+  .pastcard .d{font-family:"LXGW WenKai TC",serif;font-size:1.35rem;color:var(--ink-soft);line-height:1}
+  .pastcard .tag{font-size:.76rem;letter-spacing:.1em;color:var(--ink-soft);
+    border:1px solid var(--line);border-radius:999px;padding:3px 12px;background:#faf3ee}
+  .pastcard h3{font-size:1.1rem;color:var(--ink);font-weight:500;line-height:1.5}
+  .pastcard h3 small{display:block;font-size:.88rem;color:var(--ink-soft);font-weight:400;margin-top:3px}
+  .pastcard .moment{font-size:.97rem;color:#5f5148;line-height:1.85;
+    border-left:2px solid var(--clay);padding-left:16px;margin:2px 0 4px}
+  .pastcard .acts{display:flex;gap:10px;flex-wrap:wrap;margin-top:auto;padding-top:6px}
+  .pastcard .acts a{font-size:.9rem;text-decoration:none;padding:.5em 1.2em;border-radius:999px;
+    border:1px solid var(--line);color:var(--ink-soft);transition:all .2s}
+  .pastcard .acts a:hover{border-color:var(--clay);color:var(--clay-deep)}
+  .pastcard .acts a.replay{border-color:var(--clay);color:var(--clay-deep);font-weight:500}
+
 
   /* ===== Speakers ===== */
   .speakers{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
@@ -725,6 +743,54 @@
       <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLScZFgBt009g8beWMlKvjC7bDrurinRW20B3VlzPcdEWIZRrbA/viewform" target="_blank" rel="noopener" data-form="join">填寫活動報名表單</a>
       <a class="btn btn-ghost" href="circle.html">🌙 公益女人圈・每月新月</a>
     </div>
+  </div>
+</section>
+
+
+<!-- ============ 過去的場次 ============ -->
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">已 經 發 生 過 的</span>
+      <h2>過去的場次</h2>
+      <p>每一場結束之後，我們留下當晚真的發生的一件事。</p>
+    </div>
+    <div class="past">
+
+      <div class="pastcard">
+        <div class="top">
+          <span class="d">8/26</span>
+          <span class="pill p-online">線上孕育圈</span>
+          <span class="tag">已結束</span>
+        </div>
+        <h3>小沐・放下備孕焦慮
+          <small>高齡媽咪的孕產身心準備指南</small></h3>
+        <p class="moment">那一晚，聊天室裡開始有人說自己的事 —— 年齡、試管、多囊、還沒開始的。<br>
+          那些平常連跟另一半都難開口的話，在一個彼此不太認識的線上房間裡，被說出來了。</p>
+        <div class="acts">
+          <a href="xiaomu-0806.html">看這一場的介紹</a>
+          <a class="replay" href="https://docs.google.com/forms/d/e/1FAIpQLScZFgBt009g8beWMlKvjC7bDrurinRW20B3VlzPcdEWIZRrbA/viewform" target="_blank" rel="noopener">購買回放 NT$380（9/10 前）</a>
+        </div>
+      </div>
+
+      <div class="pastcard">
+        <div class="top">
+          <span class="d">8/13</span>
+          <span class="pill p-charity">公益女人圈</span>
+          <span class="tag">已結束</span>
+        </div>
+        <h3>獅子座新月 × 世紀日食
+          <small>被看見的勇氣</small></h3>
+        <p class="moment">二十八個人報名，十八個人在場。<br>
+          最後那段火與水的儀式，有人把想放下的舊身分交給火，再用水，迎接新的自己。</p>
+        <div class="acts">
+          <a href="circle.html">認識公益女人圈</a>
+        </div>
+      </div>
+
+    </div>
+    <p class="sched-note" style="margin-top:26px">
+      每個月的新月夜都是免費的公益女人圈，錯過了，下個月還有。</p>
   </div>
 </section>
 
