@@ -37,7 +37,9 @@ a{color:inherit;text-decoration:none}
 
 /* ---- top rule / logo ---- */
 .topbar{display:flex;align-items:center;justify-content:space-between;padding:26px 0 0}
-.topbar img{width:64px;opacity:.9}
+.topbar img{width:64px;opacity:.9;display:block}
+.tb-logo{display:inline-block;transition:opacity .2s ease}
+.tb-logo:hover{opacity:.65}
 .topbar .tb-en{font-family:"Cormorant Garamond",serif;font-style:italic;letter-spacing:.28em;
   color:var(--ink-soft);font-size:.82rem;text-transform:uppercase}
 
@@ -210,7 +212,7 @@ section{padding:72px 0}
 
 <div class="wrap">
   <div class="topbar">
-    <img src="assets/logo-rose.png" alt="生生不息・溫柔孕育圈">
+    <a class="tb-logo" href="index.html" aria-label="回到生生不息・溫柔孕育圈首頁"><img src="assets/logo-rose.png" alt="生生不息・溫柔孕育圈"></a>
     <span class="tb-en">Gentle Birthing Circle</span>
   </div>
 </div>
