@@ -94,8 +94,19 @@
 
   /* ===== 當晚流程 ===== */
   .flow{background:linear-gradient(180deg,var(--cream),var(--cream-hi))}
-  .flow-lead{text-align:center;color:var(--ink-soft);max-width:540px;margin:-20px auto 42px;font-size:1.04rem;line-height:1.9}
-  .flow-lead b{color:var(--gold-deep)}
+  .flow-lead{text-align:center;color:var(--ink-soft);max-width:540px;margin:-22px auto 22px;font-size:1.04rem;line-height:1.9}
+  .flow-foot{text-align:center;color:var(--ink-soft);max-width:540px;margin:20px auto 42px;font-size:1.02rem}
+  /* 七三比例：手機上改成橫向一行，避免標籤被硬斷行 */
+  .ratio{display:flex;gap:14px;max-width:560px;margin:0 auto}
+  .rt{flex:1;background:var(--card);border:1px solid var(--line);border-radius:16px;
+    padding:22px 18px;text-align:center;box-shadow:var(--shadow)}
+  .rt b{display:block;font-size:1.5rem;color:var(--gold-deep);font-weight:600;margin-bottom:5px;letter-spacing:.04em}
+  .rt span{display:block;color:var(--ink-soft);font-size:.95rem;line-height:1.6}
+  @media(max-width:600px){
+    .ratio{flex-direction:column;gap:12px}
+    .rt{display:flex;align-items:center;gap:16px;text-align:left;padding:16px 20px}
+    .rt b{margin:0;flex:0 0 auto;font-size:1.26rem}
+  }
   .steps{list-style:none;display:flex;flex-direction:column;gap:0;position:relative;max-width:620px;margin:0 auto}
   .steps::before{content:"";position:absolute;left:25px;top:14px;bottom:26px;width:1px;background:linear-gradient(180deg,var(--gold-soft),var(--pine-soft))}
   .steps li{display:flex;gap:22px;align-items:flex-start;padding:0 0 30px;position:relative}
@@ -111,14 +122,18 @@
   @media(max-width:600px){ .steps::before{left:21px} .st-n{width:44px;height:44px;font-size:1.04rem} .steps li{gap:16px} }
 
   /* ===== 好禮 ===== */
-  .gift{display:flex;gap:22px;align-items:flex-start;max-width:620px;margin:46px auto 0;
+  .gift{display:flex;gap:26px;align-items:center;max-width:620px;margin:46px auto 0;
     background:var(--card);border:1px solid var(--gold-soft);border-radius:var(--radius);
-    padding:28px 30px;box-shadow:var(--shadow)}
-  .gift .gi{flex:0 0 auto;font-size:1.9rem;line-height:1.2}
+    padding:26px 30px;box-shadow:var(--shadow)}
+  /* 官方書封本身就帶立體陰影與白底，不要再加外框，直接融進卡片 */
+  .gift-img{flex:0 0 auto;width:124px;mix-blend-mode:multiply}
   .gift h3{font-size:1.14rem;color:var(--gold-deep);margin-bottom:6px}
   .gift p{color:var(--ink-soft);font-size:1rem}
   .gift p b{color:var(--pine-deep)}
-  @media(max-width:600px){ .gift{padding:24px 22px;gap:16px} }
+  @media(max-width:600px){
+    .gift{flex-direction:column;text-align:center;padding:26px 22px;gap:18px}
+    .gift-img{width:160px}
+  }
 
   /* ===== 金錢卡點・互動小檢測 ===== */
   .quiz{background:linear-gradient(180deg,var(--cream),var(--cream-2))}
@@ -370,7 +385,12 @@
       <div class="kicker g">當 晚 的 流 程</div>
       <h2>這一晚，我們會這樣走</h2>
     </div>
-    <p class="flow-lead">菁羚把這一晚分成 <b>七成的金錢心理學與信念覺察</b>、<br><b>三成可以明天就開始的財務行動</b>——<br>不是來讓妳燒腦的，但會一路走到妳心裡去。</p>
+    <p class="flow-lead">菁羚把這一晚，這樣分配——</p>
+    <div class="ratio">
+      <div class="rt"><b>七成</b><span>金錢心理學與信念覺察</span></div>
+      <div class="rt"><b>三成</b><span>可以明天就開始的財務行動</span></div>
+    </div>
+    <p class="flow-foot">不是來讓妳燒腦的，但會一路走到妳心裡去。</p>
 
     <ol class="steps">
       <li>
@@ -420,10 +440,10 @@
     </ol>
 
     <div class="gift">
-      <div class="gi">🎁</div>
+      <img class="gift-img" src="assets/lidia-book-card.jpg" alt="顏菁羚 Lidia 的著作《越痛快花錢，越能把錢留下來》">
       <div>
-        <h3>當晚，我們會抽出一位</h3>
-        <p>送出菁羚的著作 <b>《越痛快花錢，越能把錢留下來》</b> 一本。<br>報名參加就有機會，當晚現場抽出。</p>
+        <h3>🎁 當晚，我們會抽出一位</h3>
+        <p>送出一本菁羚的著作 <b>《越痛快花錢，越能把錢留下來》</b>。<br>報名參加就有機會，當晚現場抽出。</p>
       </div>
     </div>
   </div>
@@ -503,7 +523,7 @@
       <div class="info-row"><div class="k">When</div><div class="v"><b>11/18（週三）</b> 19:30–21:00<small>當晚流程紮實，21:00 之後會再留一段自由分享的時間，想留的可以留下來</small></div></div>
       <div class="info-row"><div class="k">Where</div><div class="v">線上・Zoom<small>報名並完成繳費後，我們把連結寄給妳</small></div></div>
       <div class="info-row"><div class="k">Bring</div><div class="v">紙筆、耳機、一個不被打擾的角落<small>當晚有一段冥想與書寫，需要妳能安靜下來</small></div></div>
-      <div class="info-row"><div class="k">Replay</div><div class="v">這一場<b>有回放</b><small>無法準時上線也可以報名，回放的方式在報名表裡說明</small></div></div>
+      <div class="info-row"><div class="k">Replay</div><div class="v">這一場<b>有回放，但不會自動寄出</b><small>當晚無法上線的妳，可以單獨購買回放（NT$380）。<br>當晚會來、又想把錄影檔留著的妳，記得在報名表裡勾選——不另外收費，但沒勾我們就不會寄。</small></div></div>
       <div class="info-row"><div class="k">Fee</div><div class="v">單場 <b>NT$380</b><small>一個晚上，把「豐盛」重新交回妳手上</small></div></div>
     </div>
   </div>
