@@ -92,6 +92,34 @@
   .pt h3{font-size:1.28rem;color:var(--ink);margin-bottom:4px}
   .pt p{color:var(--ink-soft);font-size:1rem}
 
+  /* ===== 當晚流程 ===== */
+  .flow{background:linear-gradient(180deg,var(--cream),var(--cream-hi))}
+  .flow-lead{text-align:center;color:var(--ink-soft);max-width:540px;margin:-20px auto 42px;font-size:1.04rem;line-height:1.9}
+  .flow-lead b{color:var(--gold-deep)}
+  .steps{list-style:none;display:flex;flex-direction:column;gap:0;position:relative;max-width:620px;margin:0 auto}
+  .steps::before{content:"";position:absolute;left:25px;top:14px;bottom:26px;width:1px;background:linear-gradient(180deg,var(--gold-soft),var(--pine-soft))}
+  .steps li{display:flex;gap:22px;align-items:flex-start;padding:0 0 30px;position:relative}
+  .steps li:last-child{padding-bottom:0}
+  .st-n{flex:0 0 auto;width:52px;height:52px;border-radius:50%;background:var(--cream-hi);border:1.5px solid var(--gold-soft);
+    color:var(--gold-deep);font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.18rem;
+    display:flex;align-items:center;justify-content:center;position:relative;z-index:1}
+  .steps h3{font-size:1.18rem;color:var(--ink);margin:11px 0 5px;line-height:1.5}
+  .steps p{color:var(--ink-soft);font-size:1rem}
+  .st-q{margin-top:14px;border-left:3px solid var(--gold);padding-left:16px;color:var(--pine-deep);font-weight:500;font-size:1.04rem;line-height:1.6}
+  .st-tag{display:inline-block;margin-top:12px;background:rgba(44,92,80,.09);border:1px solid var(--pine-soft);
+    color:var(--pine-deep);border-radius:999px;padding:5px 15px;font-size:.86rem;letter-spacing:.04em}
+  @media(max-width:600px){ .steps::before{left:21px} .st-n{width:44px;height:44px;font-size:1.04rem} .steps li{gap:16px} }
+
+  /* ===== 好禮 ===== */
+  .gift{display:flex;gap:22px;align-items:flex-start;max-width:620px;margin:46px auto 0;
+    background:var(--card);border:1px solid var(--gold-soft);border-radius:var(--radius);
+    padding:28px 30px;box-shadow:var(--shadow)}
+  .gift .gi{flex:0 0 auto;font-size:1.9rem;line-height:1.2}
+  .gift h3{font-size:1.14rem;color:var(--gold-deep);margin-bottom:6px}
+  .gift p{color:var(--ink-soft);font-size:1rem}
+  .gift p b{color:var(--pine-deep)}
+  @media(max-width:600px){ .gift{padding:24px 22px;gap:16px} }
+
   /* ===== 金錢卡點・互動小檢測 ===== */
   .quiz{background:linear-gradient(180deg,var(--cream),var(--cream-2))}
   .quiz-lead{text-align:center;color:var(--ink-soft);max-width:540px;margin:-18px auto 40px;font-size:1.02rem}
@@ -336,6 +364,71 @@
   </div>
 </section>
 
+<section class="flow">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker g">當 晚 的 流 程</div>
+      <h2>這一晚，我們會這樣走</h2>
+    </div>
+    <p class="flow-lead">菁羚把這一晚分成 <b>七成的金錢心理學與信念覺察</b>、<br><b>三成可以明天就開始的財務行動</b>——<br>不是來讓妳燒腦的，但會一路走到妳心裡去。</p>
+
+    <ol class="steps">
+      <li>
+        <span class="st-n">01</span>
+        <div>
+          <h3>她怎麼從股票營業員，走到今天</h3>
+          <p>一路都在金融業，為什麼財務規劃做到後來，又加進了金錢心理學；以及這一年多母親的一場重病，怎麼把她對財富與幸福的理解整個翻過來。</p>
+        </div>
+      </li>
+      <li>
+        <span class="st-n">02</span>
+        <div>
+          <h3>財務的安全感，和心理的安全感</h3>
+          <p>我們為什麼在錢這件事上總覺得不夠？有了錢，是不是就真的有安全感？為什麼有些人明明很有錢，卻依然不敢花錢？</p>
+        </div>
+      </li>
+      <li>
+        <span class="st-n">03</span>
+        <div>
+          <h3>妳的金錢信念，是從哪裡來的</h3>
+          <p>原生家庭怎麼塑造妳看錢的方式、小時候反覆聽過的那些金錢語言，還有——我們怎麼在不知不覺之中，把它們交到了孩子手上。</p>
+          <div class="st-q">孩子不會聽妳說什麼，只會看妳做什麼。</div>
+        </div>
+      </li>
+      <li>
+        <span class="st-n">04</span>
+        <div>
+          <h3>一段冥想，看見妳與金錢的關係</h3>
+          <p>菁羚帶著妳往裡面走一趟。冥想結束後，把妳看到的、感受到的，寫下來——不給別人看，是寫給妳自己的。</p>
+          <span class="st-tag">這一段需要紙筆</span>
+        </div>
+      </li>
+      <li>
+        <span class="st-n">05</span>
+        <div>
+          <h3>三個日常就能開始的財務行動</h3>
+          <p>看見現況、怎麼支持自己、怎麼傳遞豐盛。最後妳會寫下一件事：未來七天，妳最想實踐的那一個改變。</p>
+        </div>
+      </li>
+      <li>
+        <span class="st-n">06</span>
+        <div>
+          <h3>說出來，被聽見</h3>
+          <p>最後留一段時間給彼此。妳可以說，也可以只是聽——在這個圈子裡，兩種都算參與。</p>
+        </div>
+      </li>
+    </ol>
+
+    <div class="gift">
+      <div class="gi">🎁</div>
+      <div>
+        <h3>當晚，我們會抽出一位</h3>
+        <p>送出菁羚的著作 <b>《越痛快花錢，越能把錢留下來》</b> 一本。<br>報名參加就有機會，當晚現場抽出。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="speaker">
   <div class="wrap">
     <div class="sec-head">
@@ -375,6 +468,8 @@
     <div class="quote">
       我從事財富管理已經 20 年。過去，我陪大家建立的是外在的財務規劃；近幾年，我開始更深入金錢心理學、NLP，以及金錢與潛意識的關係。
       尤其這一兩年，媽媽罹患急性血癌、接受骨髓移植，讓我深刻體會——人生真正重要的，不是賺了多少錢，而是當生命發生變化時，妳是否擁有「支持自己的力量」，以及一個能承接家庭風險的財務與心理系統。
+      <span class="pull">以前我在講別人的案例，<br>聽起來就是故事。<br>可是當它發生在我自己身上，<br>它就變成了事故。</span>
+      我以為我很會賺錢就好了。後來我才知道，如果沒有財務的底氣，家裡一旦出事，除了擔心錢，妳還要替家人做很多很多的抉擇。那不是「有沒有錢」這麼簡單的一件事——是整個家一起螺旋向上，還是一起往下沉。
       <span class="pull">真正的豐盛，<br>是內在與外在，同時富足。</span>
       我希望每一位女性離開時都知道：當妳與自己、與金錢的關係改變了，整個人生，都會開始改變。
     </div>
@@ -393,6 +488,10 @@
       <span>很有能力，卻總覺得還不夠好</span>
       <span>想更自在富足，卻不知卡在哪</span>
       <span>不想把金錢焦慮傳給孩子</span>
+      <span>一邊帶小孩、一邊創業的妳</span>
+      <span>家庭收入主要來自先生的妳</span>
+      <span>白天上班、下班帶孩子的職場媽媽</span>
+      <span>從來沒想過「金錢關係」這件事的妳</span>
     </div>
   </div>
 </section>
@@ -401,8 +500,10 @@
   <div class="wrap">
     <div class="sec-head"><div class="kicker g">活 動 資 訊</div></div>
     <div class="info-box">
-      <div class="info-row"><div class="k">When</div><div class="v"><b>11/18（週三）</b> 19:30–21:00</div></div>
+      <div class="info-row"><div class="k">When</div><div class="v"><b>11/18（週三）</b> 19:30–21:00<small>當晚流程紮實，21:00 之後會再留一段自由分享的時間，想留的可以留下來</small></div></div>
       <div class="info-row"><div class="k">Where</div><div class="v">線上・Zoom<small>報名並完成繳費後，我們把連結寄給妳</small></div></div>
+      <div class="info-row"><div class="k">Bring</div><div class="v">紙筆、耳機、一個不被打擾的角落<small>當晚有一段冥想與書寫，需要妳能安靜下來</small></div></div>
+      <div class="info-row"><div class="k">Replay</div><div class="v">這一場<b>有回放</b><small>無法準時上線也可以報名，回放的方式在報名表裡說明</small></div></div>
       <div class="info-row"><div class="k">Fee</div><div class="v">單場 <b>NT$380</b><small>一個晚上，把「豐盛」重新交回妳手上</small></div></div>
     </div>
   </div>
