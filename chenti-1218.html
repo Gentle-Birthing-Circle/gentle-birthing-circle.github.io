@@ -283,6 +283,25 @@
         border-radius:16px;padding:22px 26px}
   .price-note b{color:var(--gold-deep)}
   .mini{display:block;font-size:.9rem;color:#9a8e7a;margin-top:8px}
+  /* ---- 牌卡跑馬燈 ---- */
+  .gallery{padding:78px 0 64px;background:linear-gradient(180deg,var(--cream),var(--cream-hi));overflow:hidden}
+  .gal-lead{text-align:center;color:var(--ink-soft);max-width:520px;margin:-20px auto 40px;font-size:1.04rem;line-height:1.9}
+  .marquee{overflow:hidden;
+    -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 7%,#000 93%,transparent 100%);
+    mask-image:linear-gradient(90deg,transparent 0,#000 7%,#000 93%,transparent 100%)}
+  .mq-track{display:flex;width:max-content;animation:mq-scroll 95s linear infinite}
+  .marquee:hover .mq-track,.marquee:focus-within .mq-track{animation-play-state:paused}
+  .mq-track img{width:200px;height:200px;object-fit:cover;flex:0 0 auto;
+    margin-right:16px;border-radius:14px;border:5px solid var(--card);
+    box-shadow:0 18px 38px -24px rgba(60,50,32,.55)}
+  @keyframes mq-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  .gal-cap{text-align:center;color:#a1937c;font-size:.84rem;margin-top:22px;letter-spacing:.06em}
+  @media(max-width:600px){ .mq-track img{width:152px;height:152px;margin-right:12px;border-width:4px} }
+  @media(prefers-reduced-motion:reduce){
+    .mq-track{animation:none}
+    .marquee{overflow-x:auto;-webkit-overflow-scrolling:touch;
+      -webkit-mask-image:none;mask-image:none;padding-left:16px}
+  }
   .kids-note{max-width:640px;margin:44px auto 0;background:var(--card);border:1px solid var(--line);
         border-radius:var(--radius);box-shadow:var(--shadow);padding:30px 32px}
   .kids-note h3{font-size:1.28rem;color:var(--pine-deep);margin-bottom:12px;line-height:1.5}
@@ -418,6 +437,60 @@
       </div>
     </div>
   </div>
+</section>
+
+<!-- ============ 牌卡跑馬燈 ============ -->
+<section class="gallery" id="cards">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker g">她 做 過 的 牌 卡</div>
+      <h2>長出來，大概會像這樣</h2>
+    </div>
+    <p class="gal-lead">這些都是 Chenti 自己畫的。<br>一面是水彩，一面是當時想對自己說的那句話。<br>妳那天要做的，是屬於妳的那一張。</p>
+  </div>
+  <div class="marquee">
+    <div class="mq-track">
+        <img src="assets/album/card-01.jpg" alt="Chenti 手繪的水彩牌卡" loading="lazy" decoding="async">
+        <img src="assets/album/card-02.jpg" alt="Chenti 手繪的水彩牌卡" loading="lazy" decoding="async">
+        <img src="assets/album/card-03.jpg" alt="Chenti 手繪的水彩牌卡" loading="lazy" decoding="async">
+        <img src="assets/album/card-04.jpg" alt="Chenti 手繪的水彩牌卡" loading="lazy" decoding="async">
+        <img src="assets/album/card-05.jpg" alt="Chenti 手繪的水彩牌卡" loading="lazy" decoding="async">
+        <img src="assets/album/card-06.jpg" alt="Chenti 手繪的水彩牌卡" loading="lazy" decoding="async">
+        <img src="assets/album/card-07.jpg" alt="Chenti 手繪的水彩牌卡" loading="lazy" decoding="async">
+        <img src="assets/album/card-08.jpg" alt="Chenti 手繪的水彩牌卡" loading="lazy" decoding="async">
+        <img src="assets/album/card-09.jpg" alt="Chenti 手繪的水彩牌卡" loading="lazy" decoding="async">
+        <img src="assets/album/card-10.jpg" alt="Chenti 手繪的水彩牌卡" loading="lazy" decoding="async">
+        <img src="assets/album/card-11.jpg" alt="Chenti 手繪的水彩牌卡" loading="lazy" decoding="async">
+        <img src="assets/album/card-12.jpg" alt="Chenti 手繪的水彩牌卡" loading="lazy" decoding="async">
+        <img src="assets/album/card-13.jpg" alt="Chenti 手繪的水彩牌卡" loading="lazy" decoding="async">
+        <img src="assets/album/card-14.jpg" alt="Chenti 手繪的水彩牌卡" loading="lazy" decoding="async">
+        <img src="assets/album/card-15.jpg" alt="Chenti 手繪的水彩牌卡" loading="lazy" decoding="async">
+        <img src="assets/album/card-16.jpg" alt="Chenti 手繪的水彩牌卡" loading="lazy" decoding="async">
+        <img src="assets/album/card-17.jpg" alt="Chenti 手繪的水彩牌卡" loading="lazy" decoding="async">
+        <img src="assets/album/card-18.jpg" alt="Chenti 手繪的水彩牌卡" loading="lazy" decoding="async">
+        <img src="assets/album/card-19.jpg" alt="Chenti 手繪的水彩牌卡" loading="lazy" decoding="async">
+        <img src="assets/album/card-01.jpg" alt="" loading="lazy" decoding="async" aria-hidden="true">
+        <img src="assets/album/card-02.jpg" alt="" loading="lazy" decoding="async" aria-hidden="true">
+        <img src="assets/album/card-03.jpg" alt="" loading="lazy" decoding="async" aria-hidden="true">
+        <img src="assets/album/card-04.jpg" alt="" loading="lazy" decoding="async" aria-hidden="true">
+        <img src="assets/album/card-05.jpg" alt="" loading="lazy" decoding="async" aria-hidden="true">
+        <img src="assets/album/card-06.jpg" alt="" loading="lazy" decoding="async" aria-hidden="true">
+        <img src="assets/album/card-07.jpg" alt="" loading="lazy" decoding="async" aria-hidden="true">
+        <img src="assets/album/card-08.jpg" alt="" loading="lazy" decoding="async" aria-hidden="true">
+        <img src="assets/album/card-09.jpg" alt="" loading="lazy" decoding="async" aria-hidden="true">
+        <img src="assets/album/card-10.jpg" alt="" loading="lazy" decoding="async" aria-hidden="true">
+        <img src="assets/album/card-11.jpg" alt="" loading="lazy" decoding="async" aria-hidden="true">
+        <img src="assets/album/card-12.jpg" alt="" loading="lazy" decoding="async" aria-hidden="true">
+        <img src="assets/album/card-13.jpg" alt="" loading="lazy" decoding="async" aria-hidden="true">
+        <img src="assets/album/card-14.jpg" alt="" loading="lazy" decoding="async" aria-hidden="true">
+        <img src="assets/album/card-15.jpg" alt="" loading="lazy" decoding="async" aria-hidden="true">
+        <img src="assets/album/card-16.jpg" alt="" loading="lazy" decoding="async" aria-hidden="true">
+        <img src="assets/album/card-17.jpg" alt="" loading="lazy" decoding="async" aria-hidden="true">
+        <img src="assets/album/card-18.jpg" alt="" loading="lazy" decoding="async" aria-hidden="true">
+        <img src="assets/album/card-19.jpg" alt="" loading="lazy" decoding="async" aria-hidden="true">
+    </div>
+  </div>
+  <p class="gal-cap">照片｜Chenti</p>
 </section>
 
 <!-- ============ 講師 ============ -->
