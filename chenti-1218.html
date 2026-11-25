@@ -330,6 +330,25 @@
   .su-alt a{color:var(--gold-deep);text-decoration:underline;text-underline-offset:3px}
   @media(max-width:600px){ .su-form{padding:26px 22px 30px} .opts.row{flex-direction:column} }
 
+  /* ---- 首屏：Chenti 書寫的照片壓在底圖上，再蓋一層米白遮罩 ---- */
+  header.hero{isolation:isolate}
+  header.hero::before{content:"";position:absolute;inset:0;z-index:0;
+    background:url("assets/chenti-hero-bg.jpg") center 46% / cover no-repeat;
+    opacity:.52}
+  header.hero::after{content:"";position:absolute;inset:0;z-index:1;
+    background:
+      radial-gradient(66% 46% at 50% 32%, rgba(253,252,247,.58), transparent 72%),
+      linear-gradient(176deg, rgba(248,244,236,.86) 0%, rgba(248,244,236,.78) 38%,
+                      rgba(238,231,217,.93) 76%, rgba(227,218,199,.98) 100%)}
+  header.hero > .wrap{position:relative;z-index:2}
+  @media(max-width:600px){
+    header.hero::before{background-position:center 50%;opacity:.46}
+    header.hero::after{background:
+      radial-gradient(74% 42% at 50% 30%, rgba(253,252,247,.6), transparent 74%),
+      linear-gradient(176deg, rgba(248,244,236,.90) 0%, rgba(248,244,236,.76) 40%,
+                      rgba(238,231,217,.93) 80%, rgba(227,218,199,.98) 100%)}
+  }
+
   /* ---- 牌卡跑馬燈 ---- */
   .gallery{padding:78px 0 64px;background:linear-gradient(180deg,var(--cream),var(--cream-hi));overflow:hidden}
   .gal-lead{text-align:center;color:var(--ink-soft);max-width:520px;margin:-20px auto 40px;font-size:1.04rem;line-height:1.9}
