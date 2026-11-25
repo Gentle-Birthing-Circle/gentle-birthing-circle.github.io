@@ -1,6 +1,0 @@
-chenti-hand.woff2
-
-清松手寫體 1 (JasonHandwriting1) 的子集化版本，只含本站用到的字。
-Copyright 2020, JasonHandwriting1 is created by Jason (Yu Ching Sung)
-under the SIL Open Font License 1.1.
-http://scripts.sil.org/OFL
