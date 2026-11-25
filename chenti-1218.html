@@ -283,6 +283,30 @@
         border-radius:16px;padding:22px 26px}
   .price-note b{color:var(--gold-deep)}
   .mini{display:block;font-size:.9rem;color:#9a8e7a;margin-top:8px}
+  /* ---- 講師介紹補充 ---- */
+  .sp-intro{color:var(--pine-deep);font-size:1.06rem;line-height:1.85;margin:-8px 0 20px}
+  .sp-pull{margin:24px 0 4px;padding-top:20px;border-top:1px dashed var(--line);
+    font-size:1.14rem;line-height:1.75;color:var(--gold-deep)}
+  .sp-src{color:#a1937c;font-size:.86rem;letter-spacing:.04em}
+
+  /* ---- Chenti 的手寫字（清松手寫體 1，SIL OFL，已子集化） ---- */
+  @font-face{font-family:"ChentiHand";
+    src:url("assets/fonts/chenti-hand.woff2") format("woff2");
+    font-weight:400;font-style:normal;font-display:swap}
+  h1,
+  .sec-head h2,
+  .reframe .big,
+  .part-body h3,
+  .kids-note h3,
+  .story .pull,
+  .final h2,
+  .sp-body h3,
+  .mirror .mq{font-family:"ChentiHand","Noto Serif TC",serif;letter-spacing:.03em;
+    font-weight:400;font-synthesis:none}  /* 手寫字不要讓瀏覽器假粗 */
+  .hero h1{font-weight:400;line-height:1.3}
+  .sec-head h2{font-weight:400}
+  .final h2{font-weight:400}
+
   /* ---- 牌卡跑馬燈 ---- */
   .gallery{padding:78px 0 64px;background:linear-gradient(180deg,var(--cream),var(--cream-hi));overflow:hidden}
   .gal-lead{text-align:center;color:var(--ink-soft);max-width:520px;margin:-20px auto 40px;font-size:1.04rem;line-height:1.9}
@@ -503,15 +527,18 @@
     <div class="sp-card">
       <img class="sp-photo" src="assets/chenti-portrait.jpg" alt="Chenti">
       <div class="sp-body">
-        <div class="role">Positive Journal</div>
+        <div class="role">Joy of the Earth</div>
         <h3>Chenti</h3>
-        <div class="role-zh">正念手札創作人・牌卡創作者</div>
+        <div class="role-zh">「大地的喜悅」創辦人・正念手札與能量藝術繪畫</div>
+        <p class="sp-intro">「我用藝術與正念，陪你把心裡那顆種籽，長成走出舒適圈的勇氣。」</p>
         <ul>
-          <li>手繪水彩「正念手札」與個人牌卡的創作者</li>
-          <li>每月舉辦一場免費的正向思維公益分享會</li>
-          <li>提供一對一對話，陪人看見「那是想法，未必是心」</li>
-          <li>相信創業的初心是一個無償的分享</li>
+          <li>在士林開「大地的喜悅」—— 就是 12/18 這一場的場地</li>
+          <li>手繪水彩「正念手札」與《大地的喜悅之籽》牌卡的創作者</li>
+          <li>每月第一個週六辦一場免費公益講座「正向思維的益處」，回到她創業的初衷</li>
+          <li>每天開始工作前，先寫一段「晨之祈福」</li>
         </ul>
+        <p class="sp-pull">「畫畫對我來說，從來不是技巧的競賽，<br>而是一種回到自己的方式。」</p>
+        <p class="sp-src">—— Chenti 寫在自己的網站上</p>
       </div>
     </div>
   </div>
