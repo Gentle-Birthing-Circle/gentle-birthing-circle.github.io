@@ -77,11 +77,21 @@ a{color:inherit;text-decoration:none}
 .hero-watermark{position:absolute;top:50%;left:66%;transform:translate(-50%,-50%);
   width:min(740px,94vw);opacity:.1;color:#55507c;pointer-events:none;z-index:0}
 .hero-watermark svg{width:100%;height:auto;display:block}
-.hero-photo{position:absolute;top:50%;left:71%;transform:translate(-50%,-47%);
-  width:min(340px,42vw);aspect-ratio:1/1.12;z-index:1;pointer-events:none;
-  border-radius:170px 170px 16px 16px;overflow:hidden;
+.hero-figure{position:absolute;top:50%;left:71%;transform:translate(-50%,-44%);
+  width:min(340px,42vw);z-index:1;pointer-events:none}
+.hero-photo{position:relative;width:100%;aspect-ratio:1/1.12;overflow:hidden;
+  border-radius:170px 170px 16px 16px;
   box-shadow:0 34px 74px -32px rgba(48,40,70,.6);
   outline:1px solid rgba(191,160,99,.5);outline-offset:6px}
+/* 鏡面：照片在水上的倒影 */
+.hero-waterline{height:1px;margin:14px 0 6px;background:linear-gradient(90deg,
+  transparent,rgba(191,160,99,.65) 18%,rgba(191,160,99,.65) 82%,transparent)}
+.hero-reflect{position:relative;width:100%;aspect-ratio:1/0.44;overflow:hidden;
+  border-radius:16px 16px 70px 70px;display:flex;align-items:flex-end;
+  transform:scaleY(-1);opacity:.42;filter:blur(.7px);
+  -webkit-mask-image:linear-gradient(to bottom,transparent 4%,rgba(0,0,0,.95) 100%);
+  mask-image:linear-gradient(to bottom,transparent 4%,rgba(0,0,0,.95) 100%)}
+.hero-reflect img{width:100%;aspect-ratio:1/1.12;object-fit:cover;object-position:52% 42%;display:block}
 .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:52% 42%;display:block}
 .hero-photo::after{content:"";position:absolute;inset:0;
   background:linear-gradient(180deg,rgba(45,38,66,.08) 0%,transparent 40%,rgba(38,32,58,.3))}
@@ -118,6 +128,9 @@ section{padding:72px 0}
 .scale .ticks{display:flex;align-items:flex-end;gap:6px;height:88px}
 .scale .ticks i{flex:1;background:linear-gradient(180deg,rgba(91,86,128,.5),rgba(197,143,84,.75));
   border-radius:3px 3px 0 0;display:block;font-style:normal}
+.scale .ticks-r{display:flex;align-items:flex-start;gap:6px;height:34px;margin-top:2px;opacity:.26}
+.scale .ticks-r i{flex:1;display:block;border-radius:0 0 3px 3px;
+  background:linear-gradient(180deg,rgba(197,143,84,.8),transparent)}
 .scale .ends{display:flex;justify-content:space-between;margin-top:12px;
   font-family:"Cormorant Garamond",serif;font-style:italic;color:var(--ink-soft);letter-spacing:.08em;font-size:.95rem}
 .scale .note{margin-top:20px;color:#4d4842;font-weight:300;font-size:1.04rem;border-top:1px solid var(--line);padding-top:18px}
@@ -134,6 +147,22 @@ section{padding:72px 0}
 .band .cap{position:relative;z-index:2;width:100%;max-width:var(--maxw);margin:0 auto;padding:0 34px 42px;
   color:#fdf8f1;font-family:"Cormorant Garamond","Noto Serif TC",serif;font-weight:500;
   font-size:clamp(1.3rem,3.6vw,1.9rem);line-height:1.6;text-shadow:0 2px 18px rgba(30,22,44,.55)}
+
+
+/* ---- 鏡子區：一句話，與它在水面上的倒影 ---- */
+.mirror{padding:86px 0 78px;background:linear-gradient(180deg,var(--paper) 0%,#f6efe5 100%)}
+.mirror .wrap{text-align:center}
+.mirror .mq{font-family:"Cormorant Garamond","Noto Serif TC",serif;font-weight:500;
+  font-size:clamp(1.9rem,5.4vw,3rem);line-height:1.45;color:var(--dusk-deep);letter-spacing:.02em}
+.mirror .mline{height:1px;max-width:30em;margin:26px auto 0;background:linear-gradient(90deg,
+  transparent,rgba(191,160,99,.75) 20%,rgba(191,160,99,.75) 80%,transparent)}
+.mirror .mq-r{transform:scaleY(-1);opacity:.2;margin-top:2px;color:var(--amber-deep);
+  -webkit-mask-image:linear-gradient(to bottom,transparent 6%,rgba(0,0,0,.9) 100%);
+  mask-image:linear-gradient(to bottom,transparent 6%,rgba(0,0,0,.9) 100%)}
+.mirror .mbody{max-width:34em;margin:38px auto 0;font-size:1.1rem;line-height:1.95;
+  color:#4d4842;font-weight:300}
+.mirror .mbody b{font-weight:500;color:var(--ink)}
+@media(max-width:560px){.mirror{padding:66px 0 60px}}
 
 /* ---- 03 journey ---- */
 .flow-intro{max-width:40em;margin-bottom:26px;font-size:1.08rem;color:#4d4842;font-weight:300}
@@ -211,7 +240,7 @@ section{padding:72px 0}
 @media(max-width:760px){
   .hero{min-height:auto;padding:70px 0 84px;display:block}
   .hero-watermark{display:none}
-  .hero-photo{position:relative;left:auto;top:auto;transform:none;margin:34px auto 0;width:min(300px,74vw)}
+  .hero-figure{position:relative;left:auto;top:auto;transform:none;margin:34px auto 0;width:min(300px,74vw)}
   .shead .en{display:none}
   .band{min-height:280px}
 }
@@ -259,7 +288,11 @@ section{padding:72px 0}
       </g>
     </svg>
   </div>
-  <div class="hero-photo" aria-hidden="true"><img src="assets/joyce-1209-hero.jpg" alt="暮色的海邊，一個女子站在沙上抬頭望向天空"></div>
+  <div class="hero-figure" aria-hidden="true">
+    <div class="hero-photo"><img src="assets/joyce-1209-hero.jpg" alt="暮色的海邊，一個女子站在沙上抬頭望向天空"></div>
+    <div class="hero-waterline"></div>
+    <div class="hero-reflect"><img src="assets/joyce-1209-hero.jpg" alt=""></div>
+  </div>
   <div class="wrap">
     <div class="hero-inner">
       <div class="eyebrow">射手座新月 ・ 公益女人圈</div>
@@ -302,6 +335,10 @@ section{padding:72px 0}
         <i style="height:22%"></i><i style="height:30%"></i><i style="height:38%"></i><i style="height:46%"></i><i style="height:54%"></i>
         <i style="height:62%"></i><i style="height:70%"></i><i style="height:80%"></i><i style="height:90%"></i><i style="height:100%"></i>
       </div>
+      <div class="ticks-r" aria-hidden="true">
+        <i style="height:22%"></i><i style="height:30%"></i><i style="height:38%"></i><i style="height:46%"></i><i style="height:54%"></i>
+        <i style="height:62%"></i><i style="height:70%"></i><i style="height:80%"></i><i style="height:90%"></i><i style="height:100%"></i>
+      </div>
       <div class="ends"><span>1 ・ 最少</span><span>最多 ・ 10</span></div>
       <p class="note">這題沒有標準答案，也不用解釋。先讓那個數字浮上來就好——它常常比我們以為的誠實。</p>
     </div>
@@ -317,6 +354,17 @@ section{padding:72px 0}
   <img src="assets/joyce-1209-sand.jpg" alt="黃昏的海邊，一個女子坐在沙上，用手在沙地畫出一圈一圈的紋路">
   <div class="cap">自在前行，<br>從每一個小小的選擇開始。</div>
 </div>
+
+<!-- ===== 鏡子 ===== -->
+<section class="mirror" id="mirror">
+  <div class="wrap">
+    <p class="mq">別人的分享，<br>也能照見自身</p>
+    <div class="mline"></div>
+    <p class="mq mq-r" aria-hidden="true">別人的分享，<br>也能照見自身</p>
+    <p class="mbody">女人圈裡常發生這件事：一個人說著說著停下來，旁邊那個從頭到尾沒開口的，忽然紅了眼眶。說話的那個人並沒有在講她的事——她只是誠實地說出自己卡在哪裡，然後另一個女人，在那句話裡認出了自己。</p>
+    <p class="mbody"><b>照亮</b>是從外面給妳光；<b>照見</b>是妳本來就在那裡，只是需要一個角度，才看得到自己。<br>這一晚中間那一段，Joyce 把它叫做「鏡子連結分享」。</p>
+  </div>
+</section>
 
 <!-- ===== 03 ===== -->
 <section>
