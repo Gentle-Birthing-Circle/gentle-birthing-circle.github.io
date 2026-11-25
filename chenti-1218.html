@@ -289,6 +289,47 @@
     font-size:1.14rem;line-height:1.75;color:var(--gold-deep)}
   .sp-src{color:#a1937c;font-size:.86rem;letter-spacing:.04em}
 
+
+  /* ===== 直接報名（表單直送 Google 試算表） ===== */
+  .signup{padding:84px 0 78px;background:linear-gradient(180deg,var(--cream-2),var(--cream-3))}
+  .su-lead{text-align:center;color:var(--ink-soft);max-width:520px;margin:-20px auto 38px;
+    font-size:1.04rem;line-height:1.9}
+  .su-form{max-width:620px;margin:0 auto;background:var(--card);border:1px solid var(--line);
+    border-radius:var(--radius);box-shadow:var(--shadow);padding:34px 34px 38px}
+  .fld{margin-bottom:24px}
+  .fld:last-of-type{margin-bottom:0}
+  .fld > label,.fld .lg{display:block;font-size:1rem;color:var(--ink);margin-bottom:10px;font-weight:500}
+  .fld .req{color:var(--gold-deep);margin-left:4px}
+  .fld .hint{display:block;font-weight:400;color:var(--ink-soft);font-size:.9rem;margin-top:3px}
+  .fld input[type=text],.fld input[type=email],.fld input[type=tel],.fld textarea{
+    width:100%;font-family:inherit;font-size:1.02rem;color:var(--ink);background:var(--cream-hi);
+    border:1px solid var(--line);border-radius:12px;padding:14px 16px;line-height:1.6}
+  .fld textarea{min-height:104px;resize:vertical}
+  .fld input:focus,.fld textarea:focus{outline:none;border-color:var(--gold);background:#fff}
+  .opts{display:flex;flex-direction:column;gap:10px}
+  .opt{display:flex;gap:12px;align-items:flex-start;background:var(--cream-hi);
+    border:1px solid var(--line);border-radius:12px;padding:13px 16px;cursor:pointer;
+    transition:border-color .18s,background .18s}
+  .opt:has(input:checked){border-color:var(--gold);background:rgba(180,113,79,.08)}
+  .opt input{margin-top:3px;width:20px;height:20px;accent-color:var(--gold-deep);flex:0 0 auto;cursor:pointer}
+  .opt span{font-size:1rem;line-height:1.55;color:var(--ink)}
+  .opts.row{flex-direction:row;gap:12px}
+  .opts.row .opt{flex:1}
+  .su-btn{display:block;width:100%;margin-top:30px;padding:17px 0;border:none;border-radius:999px;
+    background:linear-gradient(135deg,var(--gold),var(--gold-deep));color:#fff;font-family:inherit;
+    font-weight:600;font-size:1.08rem;letter-spacing:.04em;cursor:pointer;
+    box-shadow:0 18px 34px -16px rgba(141,84,54,.85);transition:transform .15s,filter .2s}
+  .su-btn:hover{transform:translateY(-2px);filter:brightness(1.06)}
+  .su-btn[disabled]{opacity:.55;cursor:default;transform:none}
+  .su-err{color:#9b3d2a;font-size:.96rem;margin-top:14px;text-align:center}
+  .su-ok{max-width:620px;margin:0 auto;background:var(--card);border:1px solid var(--pine-soft);
+    border-radius:var(--radius);box-shadow:var(--shadow);padding:40px 34px;text-align:center}
+  .su-ok h3{font-size:1.5rem;color:var(--pine-deep);margin-bottom:14px}
+  .su-ok p{color:var(--ink-soft);line-height:1.9}
+  .su-alt{text-align:center;color:var(--ink-soft);font-size:.94rem;margin-top:26px}
+  .su-alt a{color:var(--gold-deep);text-decoration:underline;text-underline-offset:3px}
+  @media(max-width:600px){ .su-form{padding:26px 22px 30px} .opts.row{flex-direction:column} }
+
   /* ---- 牌卡跑馬燈 ---- */
   .gallery{padding:78px 0 64px;background:linear-gradient(180deg,var(--cream),var(--cream-hi));overflow:hidden}
   .gal-lead{text-align:center;color:var(--ink-soft);max-width:520px;margin:-20px auto 40px;font-size:1.04rem;line-height:1.9}
@@ -332,7 +373,7 @@
       <span>台北・士林　大地的喜悅</span>
       <span><b>Part 1 隨喜</b>・Part 2 NT$800</span>
     </div>
-    <a class="cta-btn" href="https://forms.gle/gNL4ZLstH51Lren49" target="_blank" rel="noopener">我要報名</a>
+    <a class="cta-btn" href="#signup">我要報名</a>
   </div>
 </header>
 
@@ -587,17 +628,216 @@
       <div class="info-row"><div class="k">Pay</div><div class="v">當天現場<small>現金或電子支付皆可，報名時不需要先匯款</small></div></div>
     </div>
     <div style="text-align:center;margin-top:34px">
-      <a class="cta-btn" href="https://forms.gle/gNL4ZLstH51Lren49" target="_blank" rel="noopener">填寫報名表</a>
+      <a class="cta-btn" href="#signup">填寫報名表</a>
     </div>
   </div>
 </section>
+
+
+<!-- ============ 直接報名 ============ -->
+<section class="signup" id="signup">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker g">報 名</div>
+      <h2>就在這裡報名</h2>
+    </div>
+    <p class="su-lead">填完按送出就好，不會跳到別的頁面。<br>費用是當天現場收的，現在不需要匯款。</p>
+
+    <form class="su-form" id="suForm" novalidate>
+      <div class="fld">
+        <label for="f-name">妳希望我們怎麼稱呼妳？<span class="req">*</span></label>
+        <input type="text" id="f-name" name="entry.1407225327" autocomplete="name" required>
+      </div>
+
+      <div class="fld">
+        <label for="f-mail">Email<span class="req">*</span>
+          <span class="hint">報名確認信會寄到這裡</span></label>
+        <input type="email" id="f-mail" name="entry.971581209" autocomplete="email" required>
+      </div>
+
+      <div class="fld">
+        <label for="f-line">LINE ID<span class="req">*</span>
+          <span class="hint">活動前的提醒我們會從 LINE 發</span></label>
+        <input type="text" id="f-line" name="entry.735715825" required>
+      </div>
+
+      <div class="fld">
+        <label for="f-tel">手機號碼<span class="hint">選填，當天臨時狀況好聯絡</span></label>
+        <input type="tel" id="f-tel" name="entry.1022131829" autocomplete="tel">
+      </div>
+
+      <div class="fld">
+        <span class="lg">妳想怎麼參加？<span class="req">*</span></span>
+        <div class="opts" id="g-join">
+        <label class="opt"><input type="radio" name="entry.1110374048" value="我要參加 Part 1 ＋ Part 2（NT$800・含材料與三張卡片・當天現場收）"><span>Part 1 ＋ Part 2　<b>NT$800</b>　含材料與三張卡片</span></label>
+        <label class="opt"><input type="radio" name="entry.1110374048" value="我先參加 Part 1（隨喜），當天再決定要不要留下來做牌卡"><span>先參加 Part 1（隨喜），當天再決定要不要留下來做牌卡</span></label>
+        <label class="opt"><input type="radio" name="entry.1110374048" value="支持席（目前暫時沒有收入／正扛著照顧責任，想先與你們聊聊）"><span>支持席　目前暫時沒有收入／正扛著照顧責任，想先聊聊</span></label>
+        </div>
+      </div>
+
+      <div class="fld">
+        <span class="lg">會帶孩子一起來嗎？<span class="hint">全年齡歡迎，不另外收費</span></span>
+        <div class="opts row">
+        <label class="opt"><input type="radio" name="entry.1957256559" value="不會"><span>不會</span></label>
+        <label class="opt"><input type="radio" name="entry.1957256559" value="會"><span>會</span></label>
+        </div>
+      </div>
+
+      <div class="fld" id="kidWrap" hidden>
+        <label for="f-kid">孩子幾歲、幾位？<span class="hint">讓我們先準備好她的位置</span></label>
+        <input type="text" id="f-kid" name="entry.946048706" placeholder="例：一位，3 歲">
+      </div>
+
+      <div class="fld">
+        <label for="f-mate">會有同行的朋友嗎？<span class="hint">選填，請留她的稱呼與聯絡方式</span></label>
+        <input type="text" id="f-mate" name="entry.2128110199">
+      </div>
+
+      <div class="fld">
+        <span class="lg">妳是從哪裡知道這一場的？<span class="hint">選填，可複選</span></span>
+        <div class="opts">
+        <label class="opt"><input type="checkbox" name="entry.79132623" value="〖Birth with Milliya 欣妙在陪妳〗 社群 (Instagram、Facebook、Threads)"><span>Birth with Milliya</span></label>
+        <label class="opt"><input type="checkbox" name="entry.79132623" value="〖蒔日大地之聲｜林宥妤〗社群 (Instagram、Facebook、Threads)"><span>蒔日大地之聲｜林宥妤</span></label>
+        <label class="opt"><input type="checkbox" name="entry.79132623" value="〖You When 有 時〗社群 (Instagram、Facebook、Threads)"><span>You When 有時</span></label>
+        <label class="opt"><input type="checkbox" name="entry.79132623" value="講師的社群 (Instagram、Facebook、Threads)"><span>Chenti 的社群</span></label>
+        <label class="opt"><input type="checkbox" name="entry.79132623" value="朋友推薦"><span>朋友推薦</span></label>
+        </div>
+      </div>
+
+      <div class="fld">
+        <label for="f-say">有想先跟我們說的話嗎？<span class="hint">選填</span></label>
+        <textarea id="f-say" name="entry.1874603720"></textarea>
+      </div>
+
+      <button class="su-btn" type="submit" id="suBtn">送出報名</button>
+      <p class="su-err" id="suErr" hidden></p>
+    </form>
+
+    <div class="su-ok" id="suOk" hidden>
+      <h3>收到了，謝謝妳 🌿</h3>
+      <p>報名確認信會寄到妳填的 Email。<br>
+      12/18（五）13:00，台北士林・大地的喜悅，<br>
+      文林路 512 號，從 1 樓花店進來就好。<br><br>
+      什麼都不用帶，費用當天現場收。</p>
+    </div>
+
+    <p class="su-alt">送不出去的話，也可以用<a href="https://forms.gle/gNL4ZLstH51Lren49" target="_blank" rel="noopener">原本的報名表</a>。</p>
+  </div>
+</section>
+<iframe name="gfSink" id="gfSink" title="報名送出" style="position:absolute;width:0;height:0;border:0;left:-9999px"></iframe>
+
+<script>
+(function(){
+  var SERIES3 = ' 從 ③ 實體孕育圈開始（12/18 Chenti）  '.trim();
+  var form = document.getElementById('suForm');
+  if (!form) return;
+  var btn = document.getElementById('suBtn');
+  var err = document.getElementById('suErr');
+  var ok  = document.getElementById('suOk');
+  var kidWrap = document.getElementById('kidWrap');
+
+  // 勾「會帶孩子」才出現孩子那一題
+  form.addEventListener('change', function (e) {
+    if (e.target.name === 'entry.1957256559') {
+      kidWrap.hidden = (e.target.value !== '會');
+    }
+  });
+
+  function fail(msg){ err.textContent = msg; err.hidden = false; }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    err.hidden = true;
+
+    var name = form['entry.1407225327'].value.trim();
+    var mail = form['entry.971581209'].value.trim();
+    var line = form['entry.735715825'].value.trim();
+    var join = form.querySelector('input[name="entry.1110374048"]:checked');
+
+    if (!name)  return fail('請留一個我們可以怎麼稱呼妳的名字。');
+    if (!/^[^@\s]+@[^@\s]+\.[A-Za-z]{2,}$/.test(mail)) return fail('Email 看起來不太對，再確認一下。');
+    if (!line)  return fail('請留一個 LINE ID，活動前的提醒我們會從 LINE 發。');
+    if (!join)  return fail('請選一個參加方式。');
+
+    // 組一份真的 form，target 丟進隱藏 iframe → 不會跳頁、也不會被 CORS 擋
+    var real = document.createElement('form');
+    real.action = ' https://docs.google.com/forms/d/e/1FAIpQLScZFgBt009g8beWMlKvjC7bDrurinRW20B3VlzPcdEWIZRrbA/formResponse  '.trim();
+    real.method = 'POST';
+    real.target = 'gfSink';
+    real.style.display = 'none';
+
+    function add(n, v){
+      if (v === null || v === undefined) v = '';
+      var i = document.createElement('input');
+      i.type = 'hidden'; i.name = n; i.value = v;
+      real.appendChild(i);
+    }
+
+    // Google 表單的多頁機制：前面幾頁的答案不是用 entry.X 送，
+    // 而是包在 partialResponse 裡；只有「最後一頁」的題目才用 entry.X。
+    var fbzx = String(-1 * Math.floor(Math.random() * 9e18));
+    var earlier = [
+      [null, 912722043,  [SERIES3], 0],
+      [null, 1110374048, [join.value], 0],
+      [null, 1555298297, ['0'], 0]
+    ];
+    add('partialResponse', JSON.stringify([earlier, null, fbzx]));
+
+    // 最後一頁的題目 —— Google 要求「整頁的欄位都要在」，空的也要送，
+    // 少送日期題的 _year/_month/_day 會被判定驗證失敗（實測）。
+    var P4 = ['entry.1407225327','entry.971581209','entry.735715825','entry.1022131829',
+              'entry.915985750','entry.2133289461','entry.2128110199','entry.946048706',
+              'entry.1874603720'];
+    P4.forEach(function (n) {
+      if (n === 'entry.915985750') { add(n, '0'); return; }   // 費用合計：當天現場收
+      var el = form[n];
+      add(n, el && el.value ? el.value.trim() : '');
+    });
+    add('entry.249090012_year', '');
+    add('entry.249090012_month', '');
+    add('entry.249090012_day', '');
+
+    var kid = form.querySelector('input[name="entry.1957256559"]:checked');
+    if (kid) add('entry.1957256559', kid.value);
+    add('entry.1957256559_sentinel', '');
+    add('entry.2114284281_sentinel', '');
+    add('entry.701777126_sentinel', '');
+    add('entry.79132623_sentinel', '');
+    form.querySelectorAll('input[name="entry.79132623"]:checked').forEach(function (c) {
+      add('entry.79132623', c.value);
+    });
+
+    add('fbzx', fbzx);
+    add('pageHistory', '0,3,4');          // 只走第 0、3、4 頁 → 只驗證這三頁的必填
+    add('fvv', '1');
+    add('submissionTimestamp', String(Date.now()));
+
+    document.body.appendChild(real);
+    btn.disabled = true;
+    btn.textContent = '送出中…';
+    real.submit();
+
+    // iframe 載入完就當成功（跨網域讀不到內容，但送達了）
+    var done = false;
+    function finish(){
+      if (done) return;
+      done = true;
+      form.hidden = true;
+      ok.hidden = false;
+      ok.scrollIntoView({behavior:'smooth', block:'center'});
+    }
+    document.getElementById('gfSink').addEventListener('load', finish);
+    setTimeout(finish, 2500);
+  });
+})();
+</script>
 
 <!-- ============ Final ============ -->
 <section class="final">
   <div class="wrap">
     <h2>把明年想說的那句話，<br><span class="gold">親手做出來</span>。</h2>
     <p>12/18（五）下午，台北士林。<br>留一個下午給自己。</p>
-    <a class="cta-btn" href="https://forms.gle/gNL4ZLstH51Lren49" target="_blank" rel="noopener">我要報名</a>
+    <a class="cta-btn" href="#signup">我要報名</a>
   </div>
 </section>
 
@@ -637,7 +877,7 @@
     <div class="fl"><b>12/18（五）13:00–16:30</b>　Chenti・透過正向書寫，顯化夢想</div>
     <div class="fl"><b>地點</b>　大地的喜悅・台北市士林區文林路 512 號（1 樓花店入口）</div>
     <div class="fl"><b>費用</b>　Part 1 隨喜・Part 2 NT$800（含材料與三張卡片）</div>
-    <div class="fl"><b>報名</b>　<a href="https://forms.gle/gNL4ZLstH51Lren49" target="_blank" rel="noopener">填寫報名表</a></div>
+    <div class="fl"><b>報名</b>　<a href="#signup">在這一頁直接報名</a></div>
   </div>
   <p class="foot-note">主辦：生生不息・溫柔孕育圈　欣妙、宥妤、郁文</p>
 </footer>
