@@ -330,6 +330,14 @@
   .su-alt a{color:var(--gold-deep);text-decoration:underline;text-underline-offset:3px}
   @media(max-width:600px){ .su-form{padding:26px 22px 30px} .opts.row{flex-direction:column} }
 
+  /* ---- 斷行：中文沒有詞邊界，瀏覽器會從任何一個字斷開，
+         所以 (1) 用 text-wrap:pretty 避免最後一行只剩兩個字
+              (2) 重要的詞用 .nb 包起來，不准被拆開 ---- */
+  p, li, .lead, .big, .flow-lead, .gal-lead, .su-lead, .note,
+  .price-note, .kids-note p, .mbody{text-wrap:pretty}
+  h1, h2, h3, .sec-head h2, .part-body h3{text-wrap:balance}
+  .nb{white-space:nowrap}
+
   /* ---- 首屏：Chenti 書寫的照片壓在底圖上，再蓋一層米白遮罩 ---- */
   header.hero{isolation:isolate}
   header.hero::before{content:"";position:absolute;inset:0;z-index:0;
@@ -386,7 +394,7 @@
     <div class="eyebrow-zh">12 / 18（五）・實體孕育圈</div>
     <h1><span class="thin">透過正向書寫</span><br><span class="gold">顯化夢想</span></h1>
     <p class="sub">正念手札創作人　Chenti</p>
-    <p class="lead">一年快走完了。<br>這個下午，我們先把心裡的話全部寫出來，<br>再從裡面挑出一句，親手做成一張帶回家的牌卡。</p>
+    <p class="lead">一年快走完了。<br><span class="nb">這個下午，</span><span class="nb">我們先把心裡的話全部寫出來，</span><br><span class="nb">再從裡面挑出一句，</span><br><span class="nb">親手做成一張帶回家的牌卡。</span></p>
     <div class="meta">
       <span>12/18（五）<b>13:00–16:30</b></span>
       <span>台北・士林　大地的喜悅</span>
@@ -400,11 +408,15 @@
 <section class="reframe">
   <div class="wrap">
     <p class="big">想法是看不見的。<br><em>但它可以被做出來。</em></p>
-    <p>這一天，妳會替自己做出一個明年的祝福。<br>
-    一個願望，一個畫面，<span class="yin">一張摸得到的卡片</span>。</p>
+    <p><span class="nb">這一天，妳會替自己</span><br>
+    <span class="nb">做出一個明年的祝福。</span><br>
+    <span class="nb">一個願望，一個畫面，</span><br>
+    <span class="nb yin">一張摸得到的卡片。</span></p>
     <div class="yy"></div>
     <p class="big" style="font-size:clamp(1.2rem,4.6vw,1.5rem);line-height:1.9">
-      書寫本來就是一種創造 ——<br>把妳的想法，變成可見、可摸、可以讀出聲音的文字。</p>
+      <span class="nb">書寫本來就是一種創造 ——</span><br>
+      <span class="nb">把妳的想法，變成可見、可摸、</span><br>
+      <span class="nb">可以讀出聲音的文字。</span></p>
   </div>
 </section>
 
@@ -438,9 +450,9 @@
           <h3>先寫出來，然後讓它沉下去</h3>
           <p>開場會有一段帶領的活動，把身體和心先安頓好。接著就是書寫 —— 不用寫得好，不用寫給誰看，把這一年還卡在心裡的、說不清楚的，全部倒出來。</p>
           <ul>
-            <li>寫完不急著整理，先讓它在紙上沉定下來</li>
+            <li>寫完不急著整理，<span class="nb">先讓它在紙上沉定下來</span></li>
             <li>沒有書寫經驗完全沒關係，Chenti 會一題一題帶</li>
-            <li>願意的話可以分享，不說話也完全可以</li>
+            <li>願意的話可以分享，<span class="nb">不說話也完全可以</span></li>
           </ul>
         </div>
       </article>
@@ -453,7 +465,7 @@
         </div>
         <div class="part-body">
           <h3>從一整頁裡，挑出那一句</h3>
-          <p>回頭讀自己剛剛寫的東西，澄清、過濾，精粹出<strong>一句話</strong> —— 可能是妳寫到的一句金句，也可能是妳替自己創造的一句真相肯定。然後把它做成一張牌卡。</p>
+          <p>回頭讀自己剛剛寫的東西，澄清、過濾，精粹出<strong>一句話</strong> —— 可能是妳寫到的一句金句，也可能是妳替自己創造的一句真相肯定。<span class="nb">然後把它做成一張牌卡。</span></p>
           <ul>
             <li>一面自己創作背面（想用水彩就用，不想畫也可以純文字）</li>
             <li>另一面寫下那句話，隨身帶著，或貼在妳想貼的地方</li>
@@ -490,17 +502,17 @@
       <div class="pt">
         <div class="no">一</div>
         <div><h3>一句自己寫給自己的話</h3>
-          <p>不是別人說的金句，是妳從自己一整頁的字裡挑出來的。那句話後來可能也會支持到旁邊的人。</p></div>
+          <p>不是別人說的金句，是妳從自己一整頁的字裡挑出來的。那句話後來<span class="nb">可能也會支持到旁邊的人。</span></p></div>
       </div>
       <div class="pt">
         <div class="no">二</div>
         <div><h3>一個「我有創造力」的證據</h3>
-          <p>原來我可以為自己創造一個句子，可以為自己創造一個畫面，也可以為自己創造一個實相。願望是可以被做出來的。</p></div>
+          <p>原來我可以為自己創造一個句子，可以為自己創造一個畫面，也可以為自己創造一個實相。<span class="nb">願望是可以被做出來的。</span></p></div>
       </div>
       <div class="pt">
         <div class="no">三</div>
         <div><h3>一個回家還能繼續做的方法</h3>
-          <p>材料和技法都很單純。明年想再寫一張、想做一小盒五到十張屬於自己的牌卡，妳都做得到。</p></div>
+          <p>材料和技法都很單純。明年想再寫一張、想做一小盒五到十張屬於自己的牌卡，<span class="nb">妳都做得到。</span></p></div>
       </div>
     </div>
   </div>
@@ -513,7 +525,7 @@
       <div class="kicker g">她 做 過 的 牌 卡</div>
       <h2>長出來，大概會像這樣</h2>
     </div>
-    <p class="gal-lead">這些都是 Chenti 自己畫的。<br>一面是水彩，一面是當時想對自己說的那句話。<br>妳那天要做的，是屬於妳的那一張。</p>
+    <p class="gal-lead">這些都是 Chenti 自己畫的。<br><span class="nb">一面是水彩，</span><span class="nb">一面是當時想對自己說的那句話。</span><br><span class="nb">妳那天要做的，</span><span class="nb">是屬於妳的那一張。</span></p>
   </div>
   <div class="marquee">
     <div class="mq-track">
@@ -573,7 +585,7 @@
         <div class="role">Joy of the Earth</div>
         <h3>Chenti</h3>
         <div class="role-zh">「大地的喜悅」創辦人・正念手札與能量藝術繪畫</div>
-        <p class="sp-intro">「我用藝術與正念，陪你把心裡那顆種籽，長成走出舒適圈的勇氣。」</p>
+        <p class="sp-intro">「我用藝術與正念，陪你把心裡那顆種籽，<span class="nb">長成走出舒適圈的勇氣。」</span></p>
         <ul>
           <li>在士林開「大地的喜悅」—— 就是 12/18 這一場的場地</li>
           <li>手繪水彩「正念手札」與《大地的喜悅之籽》牌卡的創作者</li>
