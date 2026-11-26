@@ -333,6 +333,12 @@
   .su-alt a{color:var(--gold-deep);text-decoration:underline;text-underline-offset:3px}
   @media(max-width:600px){ .su-form{padding:26px 22px 30px} .opts.row{flex-direction:column} }
 
+  .seed-note{text-align:center;max-width:36em;margin:26px auto 0;
+        color:var(--ink-soft);font-size:1.04rem;line-height:1.95;font-weight:300}
+  .seed-end{text-align:center;margin:30px auto 0;font-size:1.18rem;line-height:1.8;
+        color:var(--gold-deep)}
+  .seed-end small{display:block;margin-top:12px;font-size:.84rem;color:#a1937c;letter-spacing:.08em}
+
   /* ---- 斷行：中文沒有詞邊界，瀏覽器會從任何一個字斷開，
          所以 (1) 用 text-wrap:pretty 避免最後一行只剩兩個字
               (2) 重要的詞用 .nb 包起來，不准被拆開 ---- */
@@ -416,10 +422,16 @@
     <span class="nb">一個願望，一個畫面，</span><br>
     <span class="nb yin">一張摸得到的卡片。</span></p>
     <div class="yy"></div>
-    <p class="big" style="font-size:clamp(1.2rem,4.6vw,1.5rem);line-height:1.9">
-      <span class="nb">書寫本來就是一種創造 ——</span><br>
-      <span class="nb">把妳的想法，變成可見、可摸、</span><br>
-      <span class="nb">可以讀出聲音的文字。</span></p>
+    <p class="big" style="font-size:clamp(1.18rem,4.4vw,1.46rem);line-height:1.95">
+      <span class="nb">一個願望，像一顆種籽 ——</span><br>
+      <span class="nb">它需要土壤、水份，和照料。</span></p>
+    <p class="seed-note">
+      <span class="nb">妳的思維是那道光，</span><span class="nb">指出種籽要往哪裡長；</span><br>
+      <span class="nb">書寫與朗誦，是那泉水；</span><br>
+      <span class="nb">而紙，是承載這一切的土壤。</span></p>
+    <p class="seed-end">
+      <span class="nb">這個午後，我們一起灌溉心田。</span>
+      <small>—— Chenti</small></p>
   </div>
 </section>
 
