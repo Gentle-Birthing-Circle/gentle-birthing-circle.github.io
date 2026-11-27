@@ -281,6 +281,20 @@
   .flow-after{text-align:center;color:var(--ink-soft);max-width:600px;margin:34px auto 0;
         font-size:1.02rem;line-height:1.95;font-weight:300}
   .flow-after b{color:var(--gold-deep);font-weight:600}
+  /* ---- 中場休息：夾在兩個框之間，做出時間順序 ---- */
+  /* width:100% —— flex 直排裡若只給 margin:0 auto，會取消拉伸、縮成文字寬 */
+  .interval{width:100%;max-width:640px;text-align:center;padding:30px 24px 32px;position:relative}
+  .interval::before,.interval::after{content:"";position:absolute;left:50%;width:1px;height:18px;
+    background:var(--pine-soft)}
+  .interval::before{top:0}
+  .interval::after{bottom:0}
+  .iv-time{display:inline-block;background:rgba(143,168,145,.16);border:1px solid var(--pine-soft);
+    color:var(--pine-deep);border-radius:999px;padding:8px 24px;font-size:.96rem;letter-spacing:.1em;
+    margin-bottom:18px;white-space:nowrap}
+  .interval p{color:var(--ink-soft);font-size:1rem;line-height:1.9;font-weight:300;margin-bottom:10px}
+  .interval p:last-child{margin-bottom:0}
+  .interval .iv-note{font-size:.93rem;color:#9a8e7a;margin-top:14px}
+  @media(max-width:600px){ .interval{padding:26px 10px 28px} }
   .price-note{max-width:640px;margin:26px auto 0;text-align:center;color:var(--ink-soft);
         font-size:1rem;line-height:1.9;background:var(--card);border:1px dashed var(--gold-soft);
         border-radius:16px;padding:22px 26px}
@@ -485,6 +499,15 @@
         </div>
       </article>
 
+      <div class="interval">
+        <span class="iv-time">中場休息　14:00–14:15</span>
+        <p><span class="nb">歡迎享受茶點飲品、彼此聊聊。</span></p>
+        <p><span class="nb">只參加 Part 1 的妳，</span><span class="nb">可以在這時候安心離場；</span><br>
+        <span class="nb">有報名 Part 2 的妳，</span><span class="nb">休息過後，我們一起進入創作。</span></p>
+        <p class="iv-note"><span class="nb">沒有報名 Part 2 也沒關係 ——</span><br>
+        <span class="nb">感受完 Part 1，</span><span class="nb">再決定要不要留下來就好。</span></p>
+      </div>
+
       <article class="part">
         <img class="part-img" src="assets/chenti-card.jpg" alt="Chenti 在水彩卡上手寫字句">
         <div class="part-head">
@@ -508,12 +531,6 @@
 
     </div>
 
-    <p class="flow-after">
-      這是<b>一場</b>活動，走兩段 ——<br>
-      <span class="nb">前半場把東西倒出來，</span><span class="nb">後半場把它收成一張可以帶走的東西。</span><br>
-      <span class="nb">兩段之間有 15 分鐘的空檔（14:00–14:15）：</span><br>
-      <span class="nb">只想參加 Part 1 的妳，在這時候離場就好；</span><br>
-      <span class="nb">想留下來創作的，就直接接著走。</span></p>
 
     <p class="price-note">
       <b>Part 1（13:00–14:00）隨喜</b> —— 金額由妳決定。<br>
