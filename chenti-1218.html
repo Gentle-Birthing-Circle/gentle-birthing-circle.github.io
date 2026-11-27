@@ -764,7 +764,6 @@
         <div class="opts" id="g-join">
         <label class="opt"><input type="radio" name="entry.1110374048" value="我要參加 Part 1 ＋ Part 2（NT$800・含材料與三張卡片・報名後 3 日內匯款）"><span>Part 1 ＋ Part 2　<b>NT$800</b>　含材料與三張卡片<br><small style="color:#8a7a6c">報名後三日內匯款，位子才留得住</small></span></label>
         <label class="opt"><input type="radio" name="entry.1110374048" value="我先參加 Part 1（隨喜・不用先匯款），當天再決定要不要留下來做牌卡"><span>先參加 Part 1（隨喜）<br><small style="color:#8a7a6c">當天聽完寫完，想留下來做牌卡，現場補 NT$800 就好</small></span></label>
-        <label class="opt"><input type="radio" name="entry.1110374048" value="支持席（目前暫時沒有收入／正扛著照顧責任，想先與你們聊聊）"><span>支持席　目前暫時沒有收入／正扛著照顧責任，想先聊聊</span></label>
         </div>
       </div>
 
@@ -884,7 +883,7 @@
     // Google 表單的多頁機制：前面幾頁的答案不是用 entry.X 送，
     // 而是包在 partialResponse 裡；只有「最後一頁」的題目才用 entry.X。
     var fbzx = String(-1 * Math.floor(Math.random() * 9e18));
-    // 選了 Part 1＋Part 2 才要先匯 800；只報 Part 1 或支持席都填 0
+    // 選了 Part 1＋Part 2 才要先匯 800；只報 Part 1 填 0
     var fee = (join.value.indexOf('Part 1 ＋ Part 2') !== -1) ? '800' : '0';
     var earlier = [
       [null, 912722043,  [SERIES3], 0],
