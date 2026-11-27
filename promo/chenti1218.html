@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>Canva 匯入用｜12/18 Chenti 實體孕育圈｜宣傳輪播（套版）</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,500&family=Noto+Serif+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  /* 生生不息 IG 套版：1080×1350（4:5），底圖取自 Canva「生生不息IG 套版底圖」 */
+  :root{
+    --coral:#f0876d; --coral-d:#cf5f41; --coral-l:#f7b7a4;
+    --ink:#5a4a41; --ink2:#7d6a5e; --ink3:#a08f82;
+    --line:#edcfc3;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#2b2b2b;font-family:"Noto Serif TC",serif;color:var(--ink)}
+  .slide{width:1080px;height:1350px;position:relative;overflow:hidden;margin:26px auto;
+         background:#fdf3ee}
+  .bg{position:absolute;inset:0;width:1080px;height:1350px;display:block}
+  .in{position:absolute;inset:0;padding:96px 92px 0;display:flex;flex-direction:column}
+  .logo{position:absolute;top:44px;right:52px;width:96px;height:96px}
+
+  .pill{display:inline-block;background:var(--coral);color:#fff8f4;border-radius:999px;
+        padding:14px 42px;font-size:30px;letter-spacing:.34em;text-indent:.34em;
+        font-weight:500;white-space:nowrap}
+  .pill-o{display:inline-block;border:2px solid var(--coral);color:var(--coral-d);
+        border-radius:999px;padding:12px 36px;font-size:27px;letter-spacing:.2em;text-indent:.2em;
+        white-space:nowrap}
+
+  .more{position:absolute;left:50%;bottom:92px;transform:translateX(-50%);
+        border:2px solid var(--coral);color:var(--coral-d);border-radius:999px;
+        padding:15px 46px;font-size:29px;letter-spacing:.18em;text-indent:.18em;white-space:nowrap}
+  .more i{font-style:normal;letter-spacing:0;margin-left:10px}
+
+  h1{font-size:88px;line-height:1.22;font-weight:600;color:var(--coral-d);letter-spacing:.03em}
+  h1 .ink{color:var(--ink)}
+  h2{font-size:56px;line-height:1.38;font-weight:600;color:var(--ink);letter-spacing:.02em}
+  h2 .c{color:var(--coral-d)}
+  p{font-size:36px;line-height:1.95;color:var(--ink);font-weight:300}
+  p b{font-weight:600;color:var(--coral-d)}
+  .sm{font-size:31px;line-height:1.9;color:var(--ink2)}
+  .lead{font-size:40px;line-height:1.85;font-weight:400}
+
+  .blob{border-radius:48% 52% 46% 54% / 52% 44% 56% 48%;
+        box-shadow:0 30px 60px -34px rgba(120,70,50,.6);display:block}
+  .rect{border-radius:26px;box-shadow:0 26px 52px -30px rgba(120,70,50,.55);display:block}
+
+  ul{list-style:none;display:flex;flex-direction:column;gap:20px}
+  li{position:relative;padding-left:52px;font-size:33px;line-height:1.6;color:var(--ink);font-weight:300}
+  li:before{content:"❉";position:absolute;left:0;top:2px;color:var(--coral);font-size:30px}
+
+  .rows{display:flex;flex-direction:column}
+  .row{display:flex;gap:24px;padding:14px 0;border-bottom:1px dashed var(--line);align-items:baseline}
+  .row:last-child{border-bottom:none}
+  .row .k{flex:0 0 132px;font-size:29px;color:var(--coral-d);letter-spacing:.14em}
+  .row .v{font-size:30px;line-height:1.45;color:var(--ink)}
+  .row .v b{color:var(--coral-d)}
+  .row .v small{display:block;font-size:23px;color:var(--ink2);margin-top:3px;font-weight:300;line-height:1.55}
+
+
+  /* ---- 套版封面（照片雲朵 ＋ 下方珊瑚色塊） ---- */
+  .cover .cv-photo{position:absolute;top:-56px;left:-78px;width:880px;height:880px;display:block}
+  .cv-who{position:absolute;top:688px;left:318px;background:var(--coral);color:#fff8f4;
+    border-radius:999px;padding:13px 36px;font-size:27px;letter-spacing:.05em;white-space:nowrap;
+    box-shadow:0 12px 26px -16px rgba(120,70,50,.6)}
+  .cv-when{position:absolute;top:762px;left:318px;background:#fffaf6;color:var(--coral-d);
+    border:1.5px solid var(--coral-l);border-radius:999px;padding:12px 34px;font-size:26px;
+    letter-spacing:.04em;white-space:nowrap}
+  .cv-band{position:absolute;left:0;right:0;bottom:0;height:432px;background:var(--coral);
+    color:#fff8f4;padding:46px 92px 0}
+  .cv-kick{font-size:27px;letter-spacing:.3em;text-indent:.3em;margin-bottom:22px;opacity:.95}
+  .cv-band h1{font-size:68px;line-height:1.28;font-weight:600;color:#fff8f4;letter-spacing:.06em}
+  .cv-tag{margin-top:18px;font-size:27px;line-height:1.65;color:#fff2ea;font-weight:300;letter-spacing:.03em}
+
+  /* ---- 套版報名頁 ---- */
+  .cta-icons{display:flex;gap:30px;justify-content:center;margin-top:10px}
+  .cta-icons svg{width:52px;height:52px;fill:none;stroke:var(--coral);stroke-width:1.8}
+  .cta-pill{display:inline-block;background:var(--coral);color:#fff8f4;border-radius:999px;
+    padding:15px 40px;font-size:27px;letter-spacing:.06em;white-space:nowrap}
+  .nb{white-space:nowrap}
+  .center{text-align:center}
+  .grow{flex:1}
+  .qr{width:300px;height:300px;background:#fff;padding:16px;border-radius:22px;
+      border:1px solid var(--line);display:block}
+</style>
+</head>
+<body>
+
+<!-- ============ 1 封面 ============ -->
+<div class="slide cover" data-document-role="page" data-label="封面">
+  <img class="bg" src="https://gentle-birthing-circle.github.io/promo/tpl-bg1.jpg" alt="">
+  <img class="logo" src="https://gentle-birthing-circle.github.io/promo/logo-rose.png" alt="">
+  <img class="cv-photo" src="https://gentle-birthing-circle.github.io/promo/cloud-cover.png" alt="">
+  <div class="cv-who">分享者 ｜ Chenti ‧ 正念手札創作人</div>
+  <div class="cv-when">12/18（五） 1pm–4:30pm ｜ 台北士林</div>
+  <div class="cv-band">
+    <div class="cv-kick" style="margin-bottom:18px">12 月 實 體 孕 育 圈</div>
+    <h1>透過正向書寫<br>顯 化 夢 想</h1>
+    <p class="cv-tag">寫出來，再把那一句親手做成牌卡帶回家</p>
+  </div>
+</div>
+
+<!-- ============ 2 痛點一 ============ -->
+<div class="slide" data-document-role="page" data-label="痛點一">
+  <img class="bg" src="https://gentle-birthing-circle.github.io/promo/tpl-bg2.jpg" alt="">
+  <img class="logo" src="https://gentle-birthing-circle.github.io/promo/logo-rose.png" alt="">
+  <div class="in">
+    <div class="grow" style="display:flex;flex-direction:column;justify-content:center;padding-bottom:130px">
+      <p class="lead">一年又要走完了。</p>
+      <p class="lead" style="margin-top:36px">妳有沒有一種感覺 ——<br>
+        這一年明明發生了很多事，<br>
+        卻好像<b>沒有被好好說出來</b>過。</p>
+    </div>
+  </div>
+  <div class="more">繼續看下去<i>⟶</i></div>
+</div>
+
+<!-- ============ 3 痛點二 ============ -->
+<div class="slide" data-document-role="page" data-label="痛點二">
+  <img class="bg" src="https://gentle-birthing-circle.github.io/promo/tpl-bg1.jpg" alt="">
+  <img class="logo" src="https://gentle-birthing-circle.github.io/promo/logo-rose.png" alt="">
+  <div class="in">
+    <div class="grow" style="display:flex;flex-direction:column;justify-content:center;padding-bottom:130px">
+      <p class="sm" style="color:var(--coral-d);font-size:34px;letter-spacing:.1em">再 加 上，</p>
+      <p class="lead" style="margin-top:30px">想寫點什麼的時候，<br>
+        筆拿起來，又放下。</p>
+      <p class="lead" style="margin-top:30px">不知道從哪裡開始，<br>
+        也怕寫出來的東西<b>不夠好</b>。</p>
+    </div>
+  </div>
+  <div class="more">繼續看下去<i>⟶</i></div>
+</div>
+
+<!-- ============ 4 痛點三 ============ -->
+<div class="slide" data-document-role="page" data-label="痛點三">
+  <img class="bg" src="https://gentle-birthing-circle.github.io/promo/tpl-bg2.jpg" alt="">
+  <img class="logo" src="https://gentle-birthing-circle.github.io/promo/logo-rose.png" alt="">
+  <div class="in">
+    <div class="grow" style="display:flex;flex-direction:column;justify-content:center;padding-bottom:130px">
+      <p class="lead">每年都替自己許過願。</p>
+      <p class="lead" style="margin-top:34px">但那個願望後來<br>
+        放在哪裡，妳還記得嗎？</p>
+      <h2 style="margin-top:46px"><span class="c">妳也是嗎？</span></h2>
+    </div>
+  </div>
+  <div class="more">繼續看下去<i>⟶</i></div>
+</div>
+
+<!-- ============ 5 轉折：種籽（Chenti 的比喻） ============ -->
+<div class="slide" data-document-role="page" data-label="種籽">
+  <img class="bg" src="https://gentle-birthing-circle.github.io/promo/tpl-bg1.jpg" alt="">
+  <img class="logo" src="https://gentle-birthing-circle.github.io/promo/logo-rose.png" alt="">
+  <div class="in">
+    <div class="pill" style="align-self:flex-start">所 以 呢</div>
+    <h2 style="margin-top:28px;font-size:52px">一個願望，<br><span class="c">像一顆種籽</span></h2>
+    <div style="margin-top:24px;display:flex;justify-content:center">
+      <img src="https://gentle-birthing-circle.github.io/promo/cloud-story.png" width="330" height="330" alt="" style="display:block">
+    </div>
+    <p class="sm" style="margin-top:26px;font-size:32px;line-height:1.85">
+      <span class="nb">它需要土壤、水份，和照料。</span></p>
+    <p class="sm" style="margin-top:22px;font-size:32px;line-height:1.85">
+      <span class="nb">妳的思維是那道光，</span><br>
+      <span class="nb">指出種籽要往哪裡長；</span><br>
+      <span class="nb">書寫與朗誦，是那泉水；</span><br>
+      <span class="nb">而紙，是承載這一切的土壤。</span></p>
+    <p class="sm" style="margin-top:26px;font-size:34px;color:var(--coral-d);line-height:1.75">
+      <span class="nb">這個午後，</span><span class="nb">我們一起灌溉心田。</span></p>
+  </div>
+  <div class="more">繼續看下去<i>⟶</i></div>
+</div>
+
+<!-- ============ 6 這個下午 ============ -->
+<div class="slide" data-document-role="page" data-label="這個下午">
+  <img class="bg" src="https://gentle-birthing-circle.github.io/promo/tpl-bg2.jpg" alt="">
+  <img class="logo" src="https://gentle-birthing-circle.github.io/promo/logo-rose.png" alt="">
+  <div class="in">
+    <div class="pill" style="align-self:flex-start">這 個 下 午 怎 麼 走</div>
+    <h2 style="margin-top:32px">一場活動，<span class="c">分成兩段</span></h2>
+
+    <div style="margin-top:36px">
+      <div class="pill-o">Part 1　13:00–14:00　隨喜</div>
+      <p class="sm" style="margin-top:18px;font-size:32px">
+        <b>先寫出來，然後讓它沉下去。</b><br>
+        把這一年還卡在心裡的、說不清楚的，全部倒出來。<br>
+        不用寫得好，不用寫給誰看。</p>
+    </div>
+
+    <div style="margin-top:40px">
+      <div class="pill-o">Part 2　14:15–16:30　NT$800</div>
+      <p class="sm" style="margin-top:18px;font-size:32px">
+        <b>從一整頁裡，挑出那一句。</b><br>
+        精粹成一句話，親手做成一張牌卡帶回家。<br>
+        含材料與三張卡片，當天三張都會畫完，直接帶回家。</p>
+    </div>
+
+    <p class="sm" style="margin-top:38px;font-size:28px;color:var(--ink3)">
+      只想參加 Part 1 也完全可以。<br>
+      Part 2 用的是妳在 Part 1 寫出來的東西。</p>
+  </div>
+  <div class="more">繼續看下去<i>⟶</i></div>
+</div>
+
+<!-- ============ 7 妳將收穫 ============ -->
+<div class="slide" data-document-role="page" data-label="妳將收穫">
+  <img class="bg" src="https://gentle-birthing-circle.github.io/promo/tpl-bg1.jpg" alt="">
+  <img class="logo" src="https://gentle-birthing-circle.github.io/promo/logo-rose.png" alt="">
+  <div class="in">
+    <div class="pill" style="align-self:flex-start">妳 將 收 穫</div>
+    <h2 style="margin-top:32px">帶回家的，<br><span class="c">不只是一張卡</span></h2>
+    <ul style="margin-top:40px">
+      <li>一句自己寫給自己的話 ——<br>不是別人說的金句，是妳從自己一整頁的字裡挑出來的</li>
+      <li>一個「我有創造力」的證據 ——<br>原來我可以為自己創造一個句子、一個畫面、一個實相</li>
+      <li>一個回家還能繼續做的方法 ——<br>Chenti 會教妳怎麼自己複製這個技法</li>
+      <li>一個不被打擾的下午 ——<br>很久沒有一段時間，是只屬於妳自己的</li>
+    </ul>
+  </div>
+  <div class="more">繼續看下去<i>⟶</i></div>
+</div>
+
+<!-- ============ 8 她做過的牌卡 ============ -->
+<div class="slide" data-document-role="page" data-label="她做過的牌卡">
+  <img class="bg" src="https://gentle-birthing-circle.github.io/promo/tpl-bg2.jpg" alt="">
+  <img class="logo" src="https://gentle-birthing-circle.github.io/promo/logo-rose.png" alt="">
+  <div class="in">
+    <div class="pill" style="align-self:flex-start">她 做 過 的 牌 卡</div>
+    <h2 style="margin-top:30px">長出來，<span class="c">大概會像這樣</span></h2>
+    <div style="margin-top:34px;display:flex;flex-wrap:wrap;gap:24px;width:872px">
+      <img class="rect" src="https://gentle-birthing-circle.github.io/promo/t5-g1.jpg" width="424" height="424" alt="">
+      <img class="rect" src="https://gentle-birthing-circle.github.io/promo/t5-g2.jpg" width="424" height="424" alt="">
+      <img class="rect" src="https://gentle-birthing-circle.github.io/promo/t5-g3.jpg" width="424" height="424" alt="">
+      <img class="rect" src="https://gentle-birthing-circle.github.io/promo/t5-g4.jpg" width="424" height="424" alt="">
+    </div>
+    <p class="sm center" style="margin-top:24px;font-size:27px;color:var(--ink3)">
+      一面是水彩，一面是當時想對自己說的那句話</p>
+  </div>
+</div>
+
+<!-- ============ 9 與你分享的人 ============ -->
+<div class="slide" data-document-role="page" data-label="與你分享的人">
+  <img class="bg" src="https://gentle-birthing-circle.github.io/promo/tpl-bg1.jpg" alt="">
+  <img class="logo" src="https://gentle-birthing-circle.github.io/promo/logo-rose.png" alt="">
+  <div class="in">
+    <div class="pill" style="align-self:flex-start">與 你 分 享 的 人</div>
+    <div style="margin-top:34px;display:flex;gap:44px;align-items:flex-start">
+      <img src="https://gentle-birthing-circle.github.io/promo/cloud-chenti.png" width="400" height="400" alt="" style="display:block;flex:0 0 auto">
+      <div>
+        <h2 style="font-size:62px">Chenti</h2>
+        <p class="sm" style="margin-top:12px;font-size:28px;color:var(--coral-d);line-height:1.75">
+          「大地的喜悅」創辦人<br>正念手札創作人<br>能量藝術繪畫引導者</p>
+      </div>
+    </div>
+    <p class="sm" style="margin-top:34px;font-size:31px">
+      她在士林開「大地的喜悅」—— 也就是這一場的場地。<br>
+      手繪水彩「正念手札」與《大地的喜悅之籽》牌卡的創作者，<br>
+      每月第一個週六辦一場免費公益講座，<br>
+      每天開始工作前，先寫一段「晨之祈福」。</p>
+    <p class="sm" style="margin-top:26px;font-size:32px;color:var(--coral-d);line-height:1.8">
+      「我用藝術與正念，陪你把心裡那顆種籽，<br>長成走出舒適圈的勇氣。」</p>
+  </div>
+  <div class="more">繼續看下去<i>⟶</i></div>
+</div>
+
+<!-- ============ 10 活動資訊 ============ -->
+<div class="slide" data-document-role="page" data-label="活動資訊">
+  <img class="bg" src="https://gentle-birthing-circle.github.io/promo/tpl-bg2.jpg" alt="">
+  <img class="logo" src="https://gentle-birthing-circle.github.io/promo/logo-rose.png" alt="">
+  <div class="in">
+    <div class="pill" style="align-self:flex-start">活 動 資 訊</div>
+    <h2 style="margin-top:24px;font-size:44px">透過正向書寫，<span class="c">顯化夢想</span></h2>
+    <div class="rows" style="margin-top:26px">
+      <div class="row"><div class="k">時 間</div><div class="v"><b>12/18（五）13:00–16:30</b><small>視當天狀況可能延長至 17:00</small></div></div>
+      <div class="row"><div class="k">地 點</div><div class="v">大地的喜悅<small>台北市士林區文林路 512 號・1 樓花店入口</small></div></div>
+      <div class="row"><div class="k">帶 領</div><div class="v">Chenti<small>主辦：生生不息・溫柔孕育圈</small></div></div>
+      <div class="row"><div class="k">人 數</div><div class="v">限定 12 人<small>名額只算大人，孩子不佔名額</small></div></div>
+      <div class="row"><div class="k">費 用</div><div class="v"><b>Part 1 隨喜・Part 2 NT$800</b><small>Part 1 的隨喜當天現場給（現金或 LINE Pay，備有零錢）；Part 2 含材料與三張卡片，報名後 3 日內匯款。現場可加購 NT$88／份</small></div></div>
+      <div class="row"><div class="k">孩 子</div><div class="v">全年齡歡迎，不另外收費<small>也不佔名額；現場有一個孩子專屬的小角落</small></div></div>
+      <div class="row"><div class="k">攜 帶</div><div class="v">帶一個水壺來<small>現場有飲水機；水彩、筆刷、書寫筆、繪畫紙 Chenti 都準備好了</small></div></div>
+    </div>
+  </div>
+  <div class="more">繼續看下去<i>⟶</i></div>
+</div>
+
+<!-- ============ 11 金句 ============ -->
+<div class="slide" data-document-role="page" data-label="金句">
+  <img class="bg" src="https://gentle-birthing-circle.github.io/promo/tpl-bg1.jpg" alt="">
+  <img class="logo" src="https://gentle-birthing-circle.github.io/promo/logo-rose.png" alt="">
+  <div class="in">
+    <div class="grow" style="display:flex;flex-direction:column;justify-content:center;padding-bottom:120px">
+      <h2 style="font-size:52px;line-height:1.75;color:var(--coral-d)">
+        「畫畫對我來說，<br>從來不是技巧的競賽，<br>而是一種回到自己的方式。」</h2>
+      <p class="sm" style="margin-top:44px;font-size:32px;color:var(--ink2)">── Chenti</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 12 報名 ============ -->
+<div class="slide" data-document-role="page" data-label="報名">
+  <img class="bg" src="https://gentle-birthing-circle.github.io/promo/tpl-bg2.jpg" alt="">
+  <img class="logo" src="https://gentle-birthing-circle.github.io/promo/logo-rose.png" alt="">
+  <div class="in center" style="align-items:center">
+    <div class="cta-icons">
+      <svg viewBox="0 0 24 24"><path d="M12 20s-7-4.6-7-9.3A4 4 0 0 1 12 8a4 4 0 0 1 7-1.3C19 15.4 12 20 12 20z"/></svg>
+      <svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.5-5A8 8 0 1 1 21 12z"/></svg>
+      <svg viewBox="0 0 24 24"><path d="M21.5 3 2.5 10.2l7 2.3 2.3 7L21.5 3zM9.5 12.5 21.5 3"/></svg>
+    </div>
+    <h2 style="margin-top:40px;font-size:50px">留言「<span class="c">書寫</span>」<br>我們傳活動資訊給妳</h2>
+    <p class="sm" style="margin-top:24px;font-size:30px">
+      也歡迎把這篇貼文<b>分享</b>出去，<br>
+      讓更多想替明年寫一句話的人<br>
+      一起加入「溫柔孕育圈」</p>
+    <div style="margin-top:32px"><img class="qr" src="https://gentle-birthing-circle.github.io/promo/qr-chenti1218.png" alt=""></div>
+    <p class="sm" style="margin-top:18px;font-size:25px;color:var(--ink3);letter-spacing:.03em">
+      gentle-birthing-circle.github.io/chenti-1218.html</p>
+    <div style="margin-top:30px"><span class="cta-pill">活動詳情與報名，請掃 QRcode 或 點首頁連結</span></div>
+  </div>
+</div>
+
+</body>
+</html>
