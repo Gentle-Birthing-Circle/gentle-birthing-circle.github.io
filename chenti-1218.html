@@ -217,6 +217,7 @@
   .info-row .v{font-size:1.1rem;color:var(--ink)}
   .info-row .v b{color:var(--pine-deep)}
   .info-row .v small{display:block;color:var(--ink-soft);font-size:.92rem;margin-top:2px}
+  .info-row .map-link{display:inline-block;margin-top:8px;color:var(--gold-deep);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:1px;font-size:.9rem;letter-spacing:.04em}
 
   /* ===== Final ===== */
   .final{text-align:center;background:
@@ -374,10 +375,10 @@
   /* ---- 首屏：Chenti 書寫的照片壓在底圖上，再蓋一層米白遮罩 ---- */
   header.hero{isolation:isolate}
   header.hero::before{content:"";position:absolute;inset:0;z-index:0;
-    background:url("assets/chenti-hero-bg.jpg") 30% 44% / 150% auto no-repeat;
+    background:url("assets/chenti-hero-bg.jpg") 30% 44% / cover no-repeat;
     opacity:.62;
-    -webkit-mask-image:linear-gradient(180deg,transparent 2%,#000 16%,#000 68%,transparent 86%);
-    mask-image:linear-gradient(180deg,transparent 2%,#000 16%,#000 68%,transparent 86%)}
+    -webkit-mask-image:linear-gradient(180deg,transparent 6%,rgba(0,0,0,.35) 24%,#000 42%,#000 68%,transparent 86%);
+    mask-image:linear-gradient(180deg,transparent 6%,rgba(0,0,0,.35) 24%,#000 42%,#000 68%,transparent 86%)}
   header.hero::after{content:"";position:absolute;inset:0;z-index:1;
     background:
       radial-gradient(66% 46% at 50% 32%, rgba(253,252,247,.58), transparent 72%),
@@ -385,9 +386,9 @@
                       rgba(240,233,220,.86) 78%, rgba(229,220,202,.95) 100%)}
   header.hero > .wrap{position:relative;z-index:2}
   @media(max-width:600px){
-    header.hero::before{background-size:200% auto;background-position:24% 54%;opacity:.56;
-      -webkit-mask-image:linear-gradient(180deg,transparent 8%,#000 24%,#000 70%,transparent 88%);
-      mask-image:linear-gradient(180deg,transparent 8%,#000 24%,#000 70%,transparent 88%)}
+    header.hero::before{background-size:cover;background-position:24% 54%;opacity:.56;
+      -webkit-mask-image:linear-gradient(180deg,transparent 22%,rgba(0,0,0,.3) 40%,#000 56%,#000 70%,transparent 88%);
+      mask-image:linear-gradient(180deg,transparent 22%,rgba(0,0,0,.3) 40%,#000 56%,#000 70%,transparent 88%)}
     header.hero::after{background:
       radial-gradient(74% 42% at 50% 30%, rgba(253,252,247,.6), transparent 74%),
       linear-gradient(176deg, rgba(248,244,236,.90) 0%, rgba(248,244,236,.76) 40%,
@@ -711,9 +712,8 @@
     </div>
     <div class="info-box">
       <div class="info-row"><div class="k">Date</div><div class="v"><b>2026 / 12 / 18（五）</b><small>13:00–16:30（視當天狀況可能延長至 17:00）</small></div></div>
-      <div class="info-row"><div class="k">Place</div><div class="v">大地的喜悅<small>台北市士林區文林路 512 號<span class="nb">（1 樓花店入口）</span></small></div></div>
+      <div class="info-row"><div class="k">Place</div><div class="v">大地的喜悅<small>台北市士林區文林路 512 號<span class="nb">（1 樓花店入口）</span><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%A4%A7%E5%9C%B0%E7%9A%84%E5%96%9C%E6%82%85+%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A3%AB%E6%9E%97%E5%8D%80%E6%96%87%E6%9E%97%E8%B7%AF512%E8%99%9F" target="_blank" rel="noopener">在 Google 地圖開啟 ↗</a></small></div></div>
       <div class="info-row"><div class="k">Led by</div><div class="v">Chenti<small>正念手札創作人・<span class="nb">「大地的喜悅」創辦人</span></small></div></div>
-      <div class="info-row"><div class="k">Organizer</div><div class="v">生生不息・溫柔孕育圈<small>欣妙、宥妤、郁文</small></div></div>
       <div class="info-row"><div class="k">Size</div><div class="v">限定 12 人<small>名額只算大人，孩子不佔名額。小圈子，坐得開、說得完</small></div></div>
       <div class="info-row"><div class="k">Fee</div><div class="v"><b>Part 1 隨喜・Part 2 NT$800</b><small>Part 2 含材料與三張卡片，報名後三日內匯款；Part 1 的隨喜當天現場給。現場另可加購 NT$88／份</small></div></div>
       <div class="info-row"><div class="k">Bring</div><div class="v">帶一個水壺來<small>現場有飲水機。水彩、筆刷、書寫筆、繪畫紙 Chenti 都準備好了，其他道具主辦準備；想帶自己慣用的筆當然也可以</small></div></div>
