@@ -371,6 +371,14 @@
   h1, h2, h3, .sec-head h2, .part-body h3{text-wrap:balance}
   .nb{white-space:nowrap}
 
+  /* ---- 關於我們：回首頁看其他場次 ---- */
+  .back-home{display:inline-block;margin-top:30px;padding:13px 30px;border-radius:999px;
+    border:1px solid var(--gold-soft);color:var(--gold-deep);text-decoration:none;
+    font-size:1rem;letter-spacing:.06em;background:rgba(255,253,247,.6);
+    transition:background .2s,border-color .2s,transform .15s}
+  .back-home:hover{background:var(--card);border-color:var(--gold);transform:translateY(-2px)}
+  .back-home .ar{margin-left:8px;font-size:.9em}
+
   /* ---- 地址下面的 Google 地圖連結 ---- */
   .info-row .map-link{display:inline-block;margin-top:8px;color:var(--gold-deep);text-decoration:none;
     border-bottom:1px solid currentColor;padding-bottom:1px;font-size:.9rem;letter-spacing:.04em}
@@ -979,7 +987,6 @@
       <div class="srow now"><span class="d">12/18</span><span class="t"><b>Chenti</b>・透過正向書寫，顯化夢想<small>實體・士林　13:00–16:30</small></span></div>
     </div>
     <div style="text-align:center;margin-top:30px">
-      <a class="cta-btn pine" href="https://gentle-birthing-circle.github.io/" target="_blank" rel="noopener">看全部場次</a>
     </div>
   </div>
 </section>
@@ -993,6 +1000,7 @@
     </div>
     <p>我們相信，一個女人被好好接住過，<br>她就有力氣去接住別人。</p>
     <p>每個月一次公益女人圈，不定期的線上與實體孕育圈。<br>我們想讓那些還在心裡繞的話，有一個可以說出口的地方。</p>
+    <p><a class="back-home" href="index.html">回生生不息首頁・看所有場次<span class="ar">→</span></a></p>
   </div>
 </section>
 
