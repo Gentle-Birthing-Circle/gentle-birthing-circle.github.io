@@ -343,6 +343,25 @@
     border-radius:var(--radius);box-shadow:var(--shadow);padding:40px 34px;text-align:center}
   .su-ok h3{font-size:1.5rem;color:var(--pine-deep);margin-bottom:14px}
   .su-ok p{color:var(--ink-soft);line-height:1.9}
+  /* ---- 報名完成後：邀請朋友 ---- */
+  .share-wrap{margin-top:26px;padding-top:24px;border-top:1px dashed var(--line)}
+  .share-ask{color:var(--ink-soft);font-size:.98rem;margin-bottom:14px}
+  .share-btn{display:inline-block;padding:12px 28px;border-radius:999px;cursor:pointer;
+    border:1px solid var(--pine-soft);background:rgba(255,253,247,.7);color:var(--pine-deep);
+    font-family:inherit;font-size:1rem;letter-spacing:.05em;
+    transition:background .2s,border-color .2s,transform .15s}
+  .share-btn:hover{background:var(--card);border-color:var(--pine);transform:translateY(-2px)}
+  .share-box{margin-top:18px;text-align:left}
+  .share-text{width:100%;font-family:inherit;font-size:.96rem;line-height:1.85;color:var(--ink);
+    background:var(--cream-hi);border:1px solid var(--line);border-radius:12px;
+    padding:16px 18px;resize:vertical;min-height:300px}
+  .share-text:focus{outline:none;border-color:var(--pine)}
+  .copy-btn{display:block;width:100%;margin-top:12px;padding:13px 0;border:none;border-radius:999px;
+    background:linear-gradient(135deg,var(--pine),var(--pine-deep));color:#fff;font-family:inherit;
+    font-size:1rem;letter-spacing:.05em;cursor:pointer;transition:filter .2s}
+  .copy-btn:hover{filter:brightness(1.08)}
+  .copy-say{text-align:center;color:var(--pine-deep);font-size:.92rem;margin-top:10px;min-height:1.3em}
+
   .su-note{max-width:620px;margin:30px auto 0;background:var(--cream-hi);
     border:1px dashed var(--line);border-radius:var(--radius);padding:26px 30px;
     color:var(--ink-soft);font-size:.98rem;line-height:1.95;font-weight:300}
@@ -824,6 +843,28 @@
       <p>12/18（五）13:00，台北士林・大地的喜悅，<br>
       文林路 512 號，從 1 樓花店進來就好。<br>
       筆和紙都準備好了，<br>記得帶一個水壺來，現場有飲水機。</p>
+
+      <div class="share-wrap">
+        <p class="share-ask">想找朋友一起來嗎？</p>
+        <button type="button" class="share-btn" id="shareBtn">邀請朋友一起參加</button>
+        <div class="share-box" id="shareBox" hidden>
+          <textarea class="share-text" id="shareText" readonly rows="14">12/18（五）下午，台北士林有一場「透過正向書寫，顯化夢想」。
+
+先把這一年還卡在心裡、說不清楚的話全部寫出來，
+再從一整頁裡挑出那一句，親手做成一張牌卡帶回家。
+
+正念手札創作人 Chenti 帶領，限 12 人。
+Part 1 隨喜，Part 2 手作牌卡 NT$800，含材料與三張卡片。
+孩子可以一起來，不另外收費。
+
+我要去，妳要不要一起？🌿
+
+活動與報名
+https://gentle-birthing-circle.github.io/chenti-1218.html</textarea>
+          <button type="button" class="copy-btn" id="copyBtn">複製這段文字</button>
+          <p class="copy-say" id="copySay"></p>
+        </div>
+      </div>
     </div>
 
     <div class="su-note">
@@ -854,6 +895,34 @@
   var btn = document.getElementById('suBtn');
   var err = document.getElementById('suErr');
   var ok  = document.getElementById('suOk');
+
+  // 邀請朋友：展開 → 複製。navigator.clipboard 在部分 in-app 瀏覽器會被擋，
+  // 所以一定要留 select()＋execCommand 的退路，再不行就叫她自己長按複製。
+  var shareBtn = document.getElementById('shareBtn');
+  if (shareBtn) {
+    var shareBox = document.getElementById('shareBox');
+    var shareText = document.getElementById('shareText');
+    var copySay = document.getElementById('copySay');
+    shareBtn.addEventListener('click', function () {
+      shareBox.hidden = !shareBox.hidden;
+      if (!shareBox.hidden) shareBox.scrollIntoView({behavior: 'smooth', block: 'nearest'});
+    });
+    document.getElementById('copyBtn').addEventListener('click', function () {
+      function said(t) { copySay.textContent = t; }
+      shareText.focus();
+      shareText.setSelectionRange(0, shareText.value.length);
+      function fallback() {
+        var okCopy = false;
+        try { okCopy = document.execCommand('copy'); } catch (e) {}
+        said(okCopy ? '複製好了，貼給她就可以 🌿' : '文字已經選起來了，長按選「拷貝」就好');
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(shareText.value)
+          .then(function () { said('複製好了，貼給她就可以 🌿'); })
+          .catch(fallback);
+      } else { fallback(); }
+    });
+  }
   var kidWrap = document.getElementById('kidWrap');
 
   // 勾「會帶孩子」才出現孩子那一題
